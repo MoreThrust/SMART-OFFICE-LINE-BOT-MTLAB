@@ -12,6 +12,15 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
+$requestDD = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air2/0');
+
+if($requestDD == '{"result":"true","value":"1"}'){
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = "มีคนเข้ามา!!";
+  }
+
 if($arrJson['events'][0]['message']['text'] == "hi"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -179,14 +188,6 @@ else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะ
   $status = $Lamp1.$Lamp2.$Lamp3.$Air1.$Air2.$Air3;
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = $status;
-}
-
-$val = 1;
-if($val == 1){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "มีคนเข้ามา!!";
 }
 
 
