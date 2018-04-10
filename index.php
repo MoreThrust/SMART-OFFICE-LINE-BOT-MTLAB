@@ -11,18 +11,6 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
-$val = 1;
-if($val == 1){
- $arrPostData = array();
- $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
- $request1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
-$arrPostData['messages'][0]['type'] = "text";
- if($request1 == '{"result":"true","value":"1"}'){
-   $Lamp1 = "􀔃􀇣blue circle􏿿ไฟห้องนอนใหญ่: เปิดอยู่ \n";
- }
- 
- $arrPostData['messages'][0]['text'] = $Lamp1;
-}
 
 if($arrJson['events'][0]['message']['text'] == "hi"){
   $arrPostData = array();
@@ -189,6 +177,19 @@ else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะ
     $Air3 = "􀔃􀇢red circle􏿿แอร์ห้องรับแขก: ปิดอยู่ \n";
   }
   $status = $Lamp1.$Lamp2.$Lamp3.$Air1.$Air2.$Air3;
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = $status;
+}
+
+$val = 1;
+else if($val == 1){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $request1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
+  if($request1 == '{"result":"true","value":"1"}'){
+    $Lamp1 = "􀔃􀇣blue circle􏿿ไฟห้องนอนใหญ่: เปิดอยู่ \n";
+  }
+  $status = $Lamp1;
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = $status;
 }
