@@ -16,7 +16,7 @@ if($val == 1){
  $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
  $request1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
-
+$arrPostData['messages'][0]['type'] = "text";
  if($request1 == '{"result":"true","value":"1"}'){
    $Lamp1 = "􀔃􀇣blue circle􏿿ไฟห้องนอนใหญ่: เปิดอยู่ \n";
  }
