@@ -11,7 +11,8 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
-
+$val = 1;
+if($val == 1){
 $requestDD = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air2/0');
 
 if($requestDD == '{"result":"true","value":"1"}'){
@@ -20,6 +21,7 @@ if($requestDD == '{"result":"true","value":"1"}'){
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = "มีคนเข้ามา!!";
   }
+}
 
 if($arrJson['events'][0]['message']['text'] == "hi"){
   $arrPostData = array();
