@@ -180,6 +180,13 @@ else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะ
   $arrPostData['messages'][0]['text'] = $status;
 }
 
+var val = 1;
+if(val == 1){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "มีคนเข้ามา!!";
+}
 
 
 $ch = curl_init();
