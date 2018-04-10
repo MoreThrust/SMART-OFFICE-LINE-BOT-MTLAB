@@ -13,14 +13,15 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $val = 1;
 if($val == 1){
-$requestDD = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air2');
+ $arrPostData = array();
+ $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+ $request1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
 
-if($requestDD == '{"result":"true","value":"1"}'){
-    $arrPostData = array();
-    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = "มีคนเข้ามา!!";
-  }
+ if($request1 == '{"result":"true","value":"1"}'){
+   $Lamp1 = "􀔃􀇣blue circle􏿿ไฟห้องนอนใหญ่: เปิดอยู่ \n";
+ }
+ 
+ $arrPostData['messages'][0]['text'] = $Lamp1;
 }
 
 if($arrJson['events'][0]['message']['text'] == "hi"){
