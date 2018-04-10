@@ -1,4 +1,4 @@
-<meta http-equiv="refresh" content="2" />
+<meta http-equiv="refresh" content="5" />
 <?php
  
 $strAccessToken = "04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uysuqnv/YvY300eOcXdgPygsQJ/QPsY1CTHe9QAoR2E14pw346tN2johPVIVUMO3CaBx/7W9TkKsXdTFRqL2+UJgdB04t89/1O/w1cDnyilFU=";
@@ -181,18 +181,6 @@ else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะ
   $arrPostData['messages'][0]['text'] = $status;
 }
 
-$val = 1;
-else if($val == 1){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $request1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
-  if($request1 == '{"result":"true","value":"1"}'){
-    $Lamp1 = "มีคนเข้ามา!!";
-  }
-  $status = $Lamp1;
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = $status;
-}
 
 
 $ch = curl_init();
