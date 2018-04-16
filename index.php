@@ -10,18 +10,21 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
 $arrPostData = array();
 $arrPostData['to'] = "U25ededce0fb6209d9efa4a85be630e3c";
-$arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = "นี้คือการทดสอบ Push Message ok";
-
-$arrPostData = array();
-$arrPostData['to'] = "U25ededce0fb6209d9efa4a85be630e3c";
 $arrPostData['messages'][0]['type'] = "template";
 $arrPostData['messages'][0]['altText'] = "this is a confirm template";
-$arrPostData['messages'][0]['template'] = "'type': 'confirm','text': 'Are you sure?'";
-
+$arrPostData['messages'][0]['data'] = "type=message&label=Yes&text=yes";
+$arrPostData['messages'][0]['text'] = "ok";
 /*
- {
+{  
+   "type":"postback",
+   "label":"Buy",
+   "data":"action=buy&itemid=111",
+   "text":"Buy"
+}
 
+{
+  "type": "template",
+  "altText": "this is a confirm template",
   "template": {
       "type": "confirm",
       "text": "Are you sure?",
