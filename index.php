@@ -17,22 +17,7 @@ $arrPostData = array();
 $arrPostData['to'] = "U25ededce0fb6209d9efa4a85be630e3c";
 $arrPostData['messages'][0]['type'] = "template";
 $arrPostData['messages'][0]['altText'] = "this is a confirm template";
-$arrPostData['messages'][0]['type'] = "template";
-$arrPostData['messages'][0]['text'] = "'type': 'confirm',
-      'text': 'Are you sure?',
-      'actions': [
-          {
-            'type': 'message',
-            'label': 'Yes',
-            'text': 'yes'
-          },
-          {
-            'type': 'message',
-            'label': 'No',
-            'text': 'no'
-          }
-      ]'
-      ";
+$arrPostData['messages'][0]['template'] = "'type': 'confirm','text': 'Are you sure?'";
 
 
  {
