@@ -10,10 +10,10 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
 $arrPostData = array();
 $arrPostData['to'] = "U25ededce0fb6209d9efa4a85be630e3c";
-$arrPostData['messages'][0]['type'] = "template";
-$arrPostData['messages'][0]['altText'] = "this is a confirm template";
-$arrPostData['messages'][0]['data'] = "type=message&label=Yes&text=yes";
-$arrPostData['messages'][0]['text'] = "ok";
+$arrPostData['messages'][0]['type'] = "postback";
+$arrPostData['messages'][0]['label'] = "Buy";
+$arrPostData['messages'][0]['data'] = "action=buy&itemid=111";
+$arrPostData['messages'][0]['text'] = "Buy";
 /*
 {  
    "type":"postback",
