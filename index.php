@@ -1,22 +1,28 @@
 <?php
-include ('line-bot-api/php/line-bot.php');
-
-$channelSecret = 'ee683a19a016dc7af6706b608f71d4c5';
-$access_token  = '04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uysuqnv/YvY300eOcXdgPygsQJ/QPsY1CTHe9QAoR2E14pw346tN2johPVIVUMO3CaBx/7W9TkKsXdTFRqL2+UJgdB04t89/1O/w1cDnyilFU=';
-
-$bot = new BOT_API($channelSecret, $access_token);
-  
-if (!empty($bot->isEvents)) {
-    
-  $bot->replyMessageNew($bot->replyToken, json_encode($bot->message));
-
-  if ($bot->isSuccess()) {
-    echo 'Succeeded!';
-    exit();
-  }
-
-  // Failed
-  echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
-  exit();
-
-}
+ 
+$strAccessToken = "04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uysuqnv/YvY300eOcXdgPygsQJ/QPsY1CTHe9QAoR2E14pw346tN2johPVIVUMO3CaBx/7W9TkKsXdTFRqL2+UJgdB04t89/1O/w1cDnyilFU=";
+ 
+$strUrl = "https://api.line.me/v2/bot/message/push";
+ 
+$arrHeader = array();
+$arrHeader[] = "Content-Type: application/json";
+$arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+ 
+$arrPostData = array();
+$arrPostData['to'] = "USER_ID";
+$arrPostData['messages'][0]['type'] = "text";
+$arrPostData['messages'][0]['text'] = "นี้คือการทดสอบ Push Message";
+ 
+ 
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,$strUrl);
+curl_setopt($ch, CURLOPT_HEADER, false);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrPostData));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$result = curl_exec($ch);
+curl_close ($ch);
+ 
+?>
