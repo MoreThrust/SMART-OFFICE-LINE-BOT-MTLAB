@@ -19,8 +19,27 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
 }else if($arrJson['events'][0]['message']['text'] == "แสงสว่าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
+  $arrPostData['messages'][0]['type'] = "template";
+  $arrPostData['messages'][0]['altText'] = "this is a confirm template";
+  $arrPostData['messages'][0]['type'] = "confirm";
+  $arrPostData['messages'][0]['text'] = "ok";
+  /*"template": {
+      "type": "confirm",
+      "text": "Are you sure?",
+      "actions": [
+          {
+            "type": "message",
+            "label": "Yes",
+            "text": "yes"
+          },
+          {
+            "type": "message",
+            "label": "No",
+            "text": "no"
+          }
+      ]
+  }*/
+}
 }else if($arrJson['events'][0]['message']['text'] == "เปิดไฟห้องนอนใหญ่"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
