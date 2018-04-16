@@ -14,8 +14,10 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 if($arrJson['events'][0]['message']['text'] == "แสงสว่าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
+  $arrPostData['messages'][0]['type'] = "postback";
+  $arrPostData['messages'][0]['label'] = "Buy";
+  $arrPostData['messages'][0]['data'] = "action=buy&itemid=111";
+  $arrPostData['messages'][0]['text'] = "Buy";
 }
  
  
