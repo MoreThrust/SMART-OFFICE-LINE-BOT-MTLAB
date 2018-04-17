@@ -15,7 +15,16 @@ if($arrJson['events'][0]['message']['text'] == "แสงสว่าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "template";
+  $arrPostData['messages'][0]['altText'] = "this is a confirm template";
+  $arrPostData['messages'][0]['template'] = array(;
+  $arrPostData['messages'][0]['type'] = "confirm";
   $arrPostData['messages'][0]['text'] = "Are you sure?";
+  $arrPostData['messages'][0]['actions'] = array(;
+  $arrPostData['messages'][0]['type'] = "message";
+  $arrPostData['messages'][0]['label'] = "Yes";
+  $arrPostData['messages'][0]['text'] = "yes";
+  $arrPostData['messages'][0]['type'] = );
+  $arrPostData['messages'][0]['type'] = );
 }
  
 $ch = curl_init();
