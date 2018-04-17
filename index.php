@@ -17,7 +17,7 @@ if($arrJson['events'][0]['message']['text'] == "แสงสว่าง"){
   $arrPostData['messages'][0]['type'] = "postback";
   $arrPostData['messages'][0]['label'] = "hello";
   $arrPostData['messages'][0]['text'] = "hello";
-  $arrPostData['messages'][0]['area'] = "x=520&y=0&width=520&height=1040";
+  $arrPostData['data'][0]['area'] = "x=520&y=0&width=520&height=1040";
 }
  
  
