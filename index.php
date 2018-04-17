@@ -14,8 +14,13 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 if($arrJson['events'][0]['message']['text'] == "แสงสว่าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+  $arrPostData['messages'][0]['type'] = "datetimepicker";
+  $arrPostData['messages'][0]['label'] = "Select date";
+  $arrPostData['messages'][0]['data'] = "storeId=12345";
+  $arrPostData['messages'][0]['mode'] = "datetime";
+  $arrPostData['messages'][0]['initial'] = "2017-12-25t00:00";
+  $arrPostData['messages'][0]['max'] = "2018-01-24t23:59";
+  $arrPostData['messages'][0]['min'] = "2017-12-25t00:00";
 }
  
  
