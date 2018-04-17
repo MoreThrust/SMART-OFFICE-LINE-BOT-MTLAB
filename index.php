@@ -15,7 +15,7 @@ if($arrJson['events'][0]['message']['text'] == "แสงสว่าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['label'] = "View details";
+  $arrPostData['messages'][0]['data'] = "action=buy&itemid=111";
   $arrPostData['messages'][0]['text'] = "http://example.com/page/222";
 }
  
