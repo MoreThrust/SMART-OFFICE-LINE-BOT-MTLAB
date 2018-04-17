@@ -15,7 +15,6 @@ if($arrJson['events'][0]['message']['text'] == "แสงสว่าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['type'] = "confirm";
   $arrPostData['messages'][0]['text'] = "Are you sure?";
 }
  
