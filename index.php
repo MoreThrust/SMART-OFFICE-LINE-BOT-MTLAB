@@ -7,6 +7,7 @@
 <body>
 <div class="container">
 <center>
+	<br>
 	<h1 class="display-4">Smart Office</h1>
 </center>
 </div>
