@@ -37,8 +37,15 @@ if($arrJson['events'][0]['message']['text'] == "แสงสว่าง"){
 if($arrJson['events'][0]['message']['text'] == "วิธีใช้"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สวัสดี";
+  $arrPostData['messages'][0]['type'] = "message";
+  $arrPostData['messages'][0]['label'] = "hello";
+  $arrPostData['messages'][0]['text'] = "hello";
+  $arrPostData['messages'][0]['area'] = array(
+  $arrPostData['messages'][0]['x'] = "520";
+  $arrPostData['messages'][0]['y'] = "0";
+  $arrPostData['messages'][0]['width'] = "520";
+  $arrPostData['messages'][0]['height'] = "1040";
+	);
 }
  
  
