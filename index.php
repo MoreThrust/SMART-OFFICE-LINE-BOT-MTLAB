@@ -46,6 +46,7 @@ if($arrJson['events'][0]['message']['text'] == "วิธีใช้"){
   $arrPostData['messages'][0]['width'] = "520";
   $arrPostData['messages'][0]['height'] = "1040";
 	);
+  $arrPostData['messages'][0]['text'] = "ok";
 }
  
  
