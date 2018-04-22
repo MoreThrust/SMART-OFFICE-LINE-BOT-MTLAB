@@ -95,7 +95,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
     // カルーセルタイプ
     $messageData = [
         'type' => 'template',
-        'altText' => 'カルーセル',
+        'altText' => 'สถานะประตู',
         'template' => [
             'type' => 'carousel',
             'columns' => [
@@ -117,7 +117,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูหลังบ้าน',
-                    'text' => $st_door,
+                    'text' => echo $st_door,
                     'actions' => [
                         [
                             'type' => 'message',
