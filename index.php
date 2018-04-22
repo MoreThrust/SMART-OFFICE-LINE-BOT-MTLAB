@@ -5,10 +5,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <script type="text/javascript">
-    window.onload = function(){
-      setInterval('Status_door("Status_door.php")',1000);
-    }
-
     function Status_door() {
       var x = new XMLHttpRequest();
       x.open("get","Status_door.php");
@@ -18,6 +14,12 @@
       }
       x.send(null);
     }
+    
+    window.onload = function(){
+      setInterval('Status_door("Status_door.php")',1000);
+    }
+
+    
   </script>
 
 </head>
