@@ -26,7 +26,11 @@
 <center>
 	<br>
 	<h1 class="display-4">Smart Office</h1>
-  <?php $st_door = echo'<div id="Status_door"></div>'?>
+  <?php 
+    $st_door = echo'<div id="Status_door"></div>';
+    echo $st_door;
+
+  ?>
 </center>
 </div>
 </body>
@@ -113,7 +117,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูหลังบ้าน',
-                    'text' => $st_door,
+                    'text' => "ok",
                     'actions' => [
                         [
                             'type' => 'message',
