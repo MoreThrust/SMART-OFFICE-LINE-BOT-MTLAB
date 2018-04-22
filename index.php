@@ -28,6 +28,7 @@
 	<h1 class="display-4">Smart Office</h1>
   <?php
     $st_door = $GET[$st_door];
+    echo $st_door;
   ?>
 </center>
 </div>
