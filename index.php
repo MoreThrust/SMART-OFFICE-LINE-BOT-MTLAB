@@ -28,7 +28,7 @@
 	<h1 class="display-4">Smart Office</h1>
   <?php 
     $st_door = '<div id="Status_door"></div>';
-    echo $st_door;
+    $val_door = echo $st_door;
 
   ?>
 </center>
@@ -117,7 +117,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูหลังบ้าน',
-                    'text' => echo $st_door,
+                    'text' => $val_door,
                     'actions' => [
                         [
                             'type' => 'message',
