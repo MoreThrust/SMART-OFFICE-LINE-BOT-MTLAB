@@ -28,7 +28,7 @@
 <center>
 	<br>
 	<h1 class="display-4">Smart Office</h1>
-  <div id="Status_door"></div>
+  <div id="Status_doors"></div>
   <?php 
     $st_door = '<div id="Status_door">okk</div>';
     //echo $st_door;
@@ -51,7 +51,7 @@ $message = $jsonObj->{"events"}[0]->{"message"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 $doc = new DOMDocument();
 $doc->loadHTML($buffer);
-$id = $doc->getElementById('Status_door');
+$id = $doc->getElementById('Status_doors');
 echo "ok".$id;
 if ($message->{"text"} == 'แสงสว่าง') {
     $messageData = [
