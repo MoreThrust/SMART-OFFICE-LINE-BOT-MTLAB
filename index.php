@@ -27,7 +27,7 @@
 	<br>
 	<h1 class="display-4">Smart Office</h1>
   <?php
-    echo '<div id = "Status_door"></div>';
+    $st_door = $val[7];
   ?>
 </center>
 </div>
@@ -99,7 +99,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'columns' => [
                 [
                     'title' => 'ประตูหน้าบ้าน',
-                    'text' => 'สถานะ: ล็อคอยู่',
+                    'text' => 'สถานะ: '$st_door;,
                     'actions' => [
                         [
                             'type' => 'message',
@@ -115,7 +115,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูหลังบ้าน',
-                    'text' => 'สถานะ: ไม่มีการล็อค',
+                    'text' => 'สถานะ: '.$st_door;,
                     'actions' => [
                         [
                             'type' => 'message',
