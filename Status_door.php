@@ -13,4 +13,6 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 echo $val[7];
+$st_door = $val[7];
+$st_door_val = $POST[$st_door];
 ?>
