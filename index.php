@@ -26,7 +26,7 @@
 <center>
 	<br>
 	<h1 class="display-4">Smart Office</h1>
-  <?php echo'<div id="Status_door"></div>'?>
+  <?php $st_door = echo'<div id="Status_door"></div>'?>
 </center>
 </div>
 </body>
