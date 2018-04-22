@@ -15,4 +15,5 @@ $val = explode('"', $resp);
 echo $val[7];
 $st_door = $val[7];
 $st_door_val = $POST[$st_door];
+header("location:index.php");
 ?>
