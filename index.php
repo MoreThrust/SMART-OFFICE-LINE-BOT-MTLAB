@@ -99,7 +99,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'columns' => [
                 [
                     'title' => 'ประตูหน้าบ้าน',
-                    'text' => $st_door;,
+                    'text' => $st_door,
                     'actions' => [
                         [
                             'type' => 'message',
@@ -115,7 +115,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูหลังบ้าน',
-                    'text' => $st_door;,
+                    'text' => $st_door,
                     'actions' => [
                         [
                             'type' => 'message',
