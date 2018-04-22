@@ -41,7 +41,8 @@ $accessToken = '04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uy
 $jsonString = file_get_contents('php://input');
 error_log($jsonString);
 $jsonObj = json_decode($jsonString);
-$id = "MT";
+echo "<div id='Status_door'></div>"
+$id = echo "<div id='Status_door'></div>";
 $message = $jsonObj->{"events"}[0]->{"message"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
@@ -99,7 +100,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'columns' => [
                 [
                     'title' => 'ประตูหน้าบ้าน',
-                    'text' => echo"<div id='Status_door'></div>";,
+                    'text' => $id,
                     'actions' => [
                         [
                             'type' => 'message',
