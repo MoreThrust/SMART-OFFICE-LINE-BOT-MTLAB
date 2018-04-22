@@ -29,11 +29,6 @@
 	<br>
 	<h1 class="display-4">Smart Office</h1>
   <div id="Status_doors">okk</div>
-  <?php 
-    $st_door = '<div id="Status_door">okk</div>';
-    //echo $st_door;
-    
-  ?>
 </center>
 </div>
 </body>
@@ -49,10 +44,13 @@ $jsonObj = json_decode($jsonString);
 
 $message = $jsonObj->{"events"}[0]->{"message"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
-$doc = new DOMDocument();
-$doc->loadHTML($buffer);
-$id = $doc->getElementById('Status_doors');
-echo "ok".$id;
+$dom = new DOMDocument();
+
+$dom->loadHTML($html);
+
+$xpath = new DOMXPath($dom);
+$divContent = $xpath->query('//div[id="Status_doors"]');
+echo "ok".$divContent;
 if ($message->{"text"} == 'แสงสว่าง') {
     $messageData = [
         'type' => 'template',
