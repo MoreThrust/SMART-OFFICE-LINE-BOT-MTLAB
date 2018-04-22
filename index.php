@@ -26,6 +26,7 @@
 <center>
 	<br>
 	<h1 class="display-4">Smart Office</h1>
+  <div id="Status_door"></div>
   <?php 
     $st_door = '<div id="Status_door"></div>';
     echo $st_door;
@@ -104,7 +105,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'columns' => [
                 [
                     'title' => 'ประตูหน้าบ้าน',
-                    'text' => "ok",
+                    'text' => $id,
                     'actions' => [
                         [
                             'type' => 'message',
@@ -120,7 +121,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูหลังบ้าน',
-                    'text' => $id,
+                    'text' => "ok",
                     'actions' => [
                         [
                             'type' => 'message',
