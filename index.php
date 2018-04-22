@@ -42,7 +42,7 @@ $jsonString = file_get_contents('php://input');
 error_log($jsonString);
 $jsonObj = json_decode($jsonString);
 echo "<div id='Status_door'></div>"
-$id = echo "<div id='Status_door'></div>";
+$id = "ok";
 $message = $jsonObj->{"events"}[0]->{"message"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
