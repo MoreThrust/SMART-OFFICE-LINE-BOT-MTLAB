@@ -33,7 +33,7 @@
     $doc = new DOMDocument();
     $doc->loadHTML($buffer);
     $id = $doc->getElementById('Status_door');
-
+    echo $id;
   ?>
 </center>
 </div>
