@@ -29,7 +29,7 @@
   <div id="Status_door"></div>
   <?php 
     $st_door = '<div id="Status_door"></div>';
-    echo $st_door;
+    //echo $st_door;
     $doc = new DOMDocument();
     $doc->loadHTML($buffer);
     $id = $doc->getElementById('Status_door');
