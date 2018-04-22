@@ -14,7 +14,7 @@
       }
       x.send(null);
     }
-    
+
     window.onload = function(){
       setInterval('Status_door("Status_door.php")',1000);
     }
@@ -32,10 +32,7 @@
   <?php 
     $st_door = '<div id="Status_door"></div>';
     //echo $st_door;
-    $doc = new DOMDocument();
-    $doc->loadHTML($buffer);
-    $id = $doc->getElementById('Status_door');
-    echo "ok".$id;
+    
   ?>
 </center>
 </div>
@@ -52,7 +49,10 @@ $jsonObj = json_decode($jsonString);
 
 $message = $jsonObj->{"events"}[0]->{"message"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
-
+$doc = new DOMDocument();
+$doc->loadHTML($buffer);
+$id = $doc->getElementById('Status_door');
+echo "ok".$id;
 if ($message->{"text"} == 'แสงสว่าง') {
     $messageData = [
         'type' => 'template',
