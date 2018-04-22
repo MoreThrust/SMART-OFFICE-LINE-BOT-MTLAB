@@ -16,64 +16,126 @@
 
 <?php
 
-$API_URL = 'https://api.line.me/v2/bot/message/reply';
-$ACCESS_TOKEN = '04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uysuqnv/YvY300eOcXdgPygsQJ/QPsY1CTHe9QAoR2E14pw346tN2johPVIVUMO3CaBx/7W9TkKsXdTFRqL2+UJgdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
-$POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
+$accessToken = '04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uysuqnv/YvY300eOcXdgPygsQJ/QPsY1CTHe9QAoR2E14pw346tN2johPVIVUMO3CaBx/7W9TkKsXdTFRqL2+UJgdB04t89/1O/w1cDnyilFU=';
 
-$request = file_get_contents('php://input');   // Get request content
-$request_array = json_decode($request, true);   // Decode JSON to Array
+$jsonString = file_get_contents('php://input');
+error_log($jsonString);
+$jsonObj = json_decode($jsonString);
 
-if ( sizeof($request_array['events']) > 0 )
-{
+$message = $jsonObj->{"events"}[0]->{"message"};
+$replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
- foreach ($request_array['events'] as $event)
- {
-  $reply_message = '';
-  $reply_token = $event['replyToken'];
-
-  if ( $event['type'] == 'message' ) 
-  {
-   if( $event['message']['type'] == 'text' )
-   {
-    $text = $event['message']['text'];
-    $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
-   }
-   else
-    $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
-  
-  }
-  else
-   $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
- 
-  if( strlen($reply_message) > 0 )
-  {
-   //$reply_message = iconv("tis-620","utf-8",$reply_message);
-   $data = [
-    'replyToken' => $reply_token,
-    'messages' => [['type' => 'text', 'text' => $reply_message]]
-   ];
-   $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-
-   $send_result = send_reply_message($API_URL, $POST_HEADER, $post_body);
-   echo "Result: ".$send_result."\r\n";
-  }
- }
+if ($message->{"text"} == 'แสงสว่าง') {
+    $messageData = [
+        'type' => 'template',
+        'altText' => '確認ダイアログ',
+        'template' => [
+            'type' => 'confirm',
+            'text' => '元気ですかー？',
+            'actions' => [
+                [
+                    'type' => 'message',
+                    'label' => '元気です',
+                    'text' => '元気です'
+                ],
+                [
+                    'type' => 'message',
+                    'label' => 'まあまあです',
+                    'text' => 'まあまあです'
+                ],
+            ]
+        ]
+    ];
+} elseif ($message->{"text"} == 'แอร์') {
+    // ボタンタイプ
+    $messageData = [
+        'type' => 'template',
+        'altText' => 'ボタン',
+        'template' => [
+            'type' => 'buttons',
+            'title' => 'タイトルです',
+            'text' => '選択してね',
+            'actions' => [
+                [
+                    'type' => 'postback',
+                    'label' => 'webhookにpost送信',
+                    'data' => 'value'
+                ],
+                [
+                    'type' => 'uri',
+                    'label' => 'googleへ移動',
+                    'uri' => 'https://google.com'
+                ]
+            ]
+        ]
+    ];
+} elseif ($message->{"text"} == 'ประตู') {
+    // カルーセルタイプ
+    $messageData = [
+        'type' => 'template',
+        'altText' => 'カルーセル',
+        'template' => [
+            'type' => 'carousel',
+            'columns' => [
+                [
+                    'title' => 'ประตูหน้าบ้าน',
+                    'text' => 'สถานะ: ล็อคอยู่',
+                    'actions' => [
+                        [
+                            'type' => 'message',
+                            'label' => 'ล็อคประตู',
+                            'text' => 'ล็อคประตู'
+                        ],
+                        [
+                            'type' => 'message',
+                            'label' => 'ปลดล็อคประตู',
+                            'text' => 'ปลดล็อคประตู'
+                        ]
+                    ]
+                ],
+                [
+                    'title' => 'ประตูหลังบ้าน',
+                    'text' => 'สถานะ: ไม่มีการล็อค',
+                    'actions' => [
+                        [
+                            'type' => 'message',
+                            'label' => 'ล็อคประตู',
+                            'text' => 'ล็อคประตู'
+                        ],
+                        [
+                            'type' => 'message',
+                            'label' => 'ปลดล็อคประตู',
+                            'text' => 'ปลดล็อคประตู'
+                        ]
+                    ]
+                ],
+            ]
+        ]
+    ];
+} else {
+    $messageData = [
+        'type' => 'text',
+        'text' => "ผมไม่เข้าใจ"
+    ];
 }
 
-echo "OK";
+$response = [
+    'replyToken' => $replyToken,
+    'messages' => [$messageData]
+];
+error_log(json_encode($response));
 
-function send_reply_message($url, $post_header, $post_body)
-{
- $ch = curl_init($url);
- curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
- curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
- curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
- curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
- curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
- $result = curl_exec($ch);
- curl_close($ch);
-
- return $result;
-}
+$ch = curl_init('https://api.line.me/v2/bot/message/reply');
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Content-Type: application/json; charser=UTF-8',
+    'Authorization: Bearer ' . $accessToken
+));
+$result = curl_exec($ch);
+error_log($result);
+curl_close($ch);
 
 ?>
