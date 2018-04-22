@@ -3,12 +3,32 @@
 <head>
 	<title>Smart Office</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script type="text/javascript">
+    window.onload = function(){
+      setInterval('Status_door("Status_door.php")',1000);
+    }
+
+    function Status_door() {
+      var x = new XMLHttpRequest();
+      x.open("get","Status_door.php");
+      x.onreadystatechange = function(){
+        var content = document.getElementById("Status_door");
+        content.innerHTML = x.responseText;
+      }
+      x.send(null);
+    }
+  </script>
+
 </head>
 <body>
 <div class="container">
 <center>
 	<br>
 	<h1 class="display-4">Smart Office</h1>
+  <?php
+    echo '<div id = "Status_door"></div>';
+  ?>
 </center>
 </div>
 </body>
