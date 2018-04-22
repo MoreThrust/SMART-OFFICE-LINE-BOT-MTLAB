@@ -117,7 +117,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูหลังบ้าน',
-                    'text' => "ok",
+                    'text' => $st_door,
                     'actions' => [
                         [
                             'type' => 'message',
