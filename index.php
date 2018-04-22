@@ -28,7 +28,7 @@
 <center>
 	<br>
 	<h1 class="display-4">Smart Office</h1>
-  <div id="Status_doors">MoreThrust</div>
+  <div id="Status_door">MoreThrust</div>
 </center>
 </div>
 </body>
@@ -44,13 +44,7 @@ $jsonObj = json_decode($jsonString);
 
 $message = $jsonObj->{"events"}[0]->{"message"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
-$dom = new DOMDocument();
 
-$dom->loadHTML($html);
-
-$xpath = new DOMXPath($dom);
-$divContent = $xpath->query('//div[id="Status_doors"]');
-echo "ok".$divContent;
 if ($message->{"text"} == 'แสงสว่าง') {
     $messageData = [
         'type' => 'template',
