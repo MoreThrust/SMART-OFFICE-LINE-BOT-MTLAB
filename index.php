@@ -99,7 +99,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'columns' => [
                 [
                     'title' => 'ประตูหน้าบ้าน',
-                    'text' => print "<div id='Status_door'></div>",
+                    'text' => echo"<div id='Status_door'></div>",
                     'actions' => [
                         [
                             'type' => 'message',
