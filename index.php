@@ -28,7 +28,7 @@
 <center>
 	<br>
 	<h1 class="display-4">Smart Office</h1>
-  <div id="Status_doors">okk</div>
+  <div id="Status_doors">MoreThrust</div>
 </center>
 </div>
 </body>
