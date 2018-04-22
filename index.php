@@ -30,7 +30,7 @@
 	<h1 class="display-4">Smart Office</h1>
   <div id="Status_door"></div>
   <?php 
-    $st_door = '<div id="Status_door"></div>';
+    $st_door = '<div id="Status_door">okk</div>';
     //echo $st_door;
     
   ?>
