@@ -29,6 +29,9 @@
   <?php 
     $st_door = '<div id="Status_door"></div>';
     echo $st_door;
+    $val_door = $_POST["Status_door"];
+    echo $val_door;
+    
 
   ?>
 </center>
