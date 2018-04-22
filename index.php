@@ -29,9 +29,9 @@
   <?php 
     $st_door = '<div id="Status_door"></div>';
     echo $st_door;
-    $val_door = $_POST["Status_door"];
-    echo $val_door;
-    
+    $doc = new DOMDocument();
+    $doc->loadHTML($buffer);
+    $id = $doc->getElementById('Status_door');
 
   ?>
 </center>
@@ -120,7 +120,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูหลังบ้าน',
-                    'text' => $st_door,
+                    'text' => $id,
                     'actions' => [
                         [
                             'type' => 'message',
