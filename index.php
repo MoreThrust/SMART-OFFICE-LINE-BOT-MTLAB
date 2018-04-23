@@ -1,5 +1,6 @@
 <?php
 include("Status.php");
+include("set_anto.php");
 
 $accessToken = '04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uysuqnv/YvY300eOcXdgPygsQJ/QPsY1CTHe9QAoR2E14pw346tN2johPVIVUMO3CaBx/7W9TkKsXdTFRqL2+UJgdB04t89/1O/w1cDnyilFU=';
 
@@ -115,12 +116,15 @@ if ($message->{"text"} == 'แสงสว่าง') {
     $messageData = [
         'type' => 'text',
         'text' => "ล็อกประตูหน้าเรียบร้อยแล้ว"
+        
     ];
+    $set_front_door = "lock";
 }elseif($message->{"text"} == 'ปลดล็อกประตูหน้า') {
     $messageData = [
         'type' => 'text',
         'text' => "ปลดล็อกประตูหน้าเรียบร้อยแล้ว"
     ];
+    $set_front_door = "unlock";
 }elseif($message->{"text"} == 'ล็อกประตูหลัง') {
     $messageData = [
         'type' => 'text',
