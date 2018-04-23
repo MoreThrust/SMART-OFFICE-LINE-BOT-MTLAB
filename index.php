@@ -48,7 +48,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'type' => 'message',
-                    'label' => $st_air_mtr1,
+                    'label' => $st_air_wr,
                     'text' => 'แอร์ห้องทำงาน'
                 ]
             ]

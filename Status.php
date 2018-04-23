@@ -81,3 +81,21 @@ $val = explode('"', $resp);
 
 $st_air_mtr1 = 'ห้องประชุม1 อุณหภูมิ '.$val[7].'°C';
 ?>
+
+<?php
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/work_room_temp',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+));
+
+$resp = curl_exec($curl);
+
+curl_close($curl);
+
+$val = explode('"', $resp);
+
+$st_air_wr = 'ห้องทำงาน อุณหภูมิ '.$val[7].'°C';
+?>
