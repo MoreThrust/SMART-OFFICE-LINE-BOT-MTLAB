@@ -1,5 +1,14 @@
-<!-- ############### STATUS DOOR ############### -->
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Office</title>
+  <meta http-equiv="refresh" content="3">
+</head>
+<body>
+
+</body>
+</html>
 
 <?php
 include("Status.php");
