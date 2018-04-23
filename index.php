@@ -56,7 +56,6 @@ if ($message->{"text"} == 'แสงสว่าง') {
         ]
     ];
 } elseif ($message->{"text"} == 'ประตู') {
-    // カルーセルタイプ
     $messageData = [
         'type' => 'template',
         'altText' => 'สถานะประตู',
@@ -65,7 +64,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'columns' => [
                 [
                     'title' => 'ประตูหน้า',
-                    'text' => $st_door,
+                    'text' => $st_front_door,
                     'actions' => [
                         [
                             'type' => 'message',
@@ -81,7 +80,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูหลัง',
-                    'text' => "ok",
+                    'text' => $st_back_door,
                     'actions' => [
                         [
                             'type' => 'message',
@@ -97,7 +96,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 ],
                 [
                     'title' => 'ประตูห้องประชุม 1',
-                    'text' => "ok",
+                    'text' => $st_mtr1_door,
                     'actions' => [
                         [
                             'type' => 'message',
