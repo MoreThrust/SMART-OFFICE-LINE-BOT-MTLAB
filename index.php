@@ -3,25 +3,6 @@
 <head>
 	<title>Smart Office</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <script type="text/javascript">
-    function Status_door() {
-      var x = new XMLHttpRequest();
-      x.open("get","Status_door.php");
-      x.onreadystatechange = function(){
-        var content = document.getElementById("Status_door");
-        content.innerHTML = x.responseText;
-      }
-      x.send(null);
-    }
-
-    window.onload = function(){
-      setInterval('Status_door("Status_door.php")',1000);
-    }
-
-    
-  </script>
-
 </head>
 <body>
 <div class="container">
@@ -30,13 +11,30 @@
 	<h1 class="display-4">Smart Office</h1>
   <div id="Status_door">MoreThrust</div><br>
   <?php 
-    $valstd = $_POST['std']; 
-    echo $valstd;
+    echo $val[7];
   ?>
 </center>
 </div>
 </body>
 </html>
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/get/RM2BVxasyryPXrpuxm5xCkUnFxfkg1HbMDdG3kTU/settime/tim_now',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+));
+
+$resp = curl_exec($curl);
+
+curl_close($curl);
+$val = explode('"', $resp);
+echo 'สถานะ: '.$val[7];
+
+?>
 
 <?php
 
