@@ -69,12 +69,12 @@ if ($message->{"text"} == 'แสงสว่าง') {
                         [
                             'type' => 'message',
                             'label' => 'ล็อคประตู',
-                            'text' => 'ล็อคประตู'
+                            'text' => 'cf1'
                         ],
                         [
                             'type' => 'message',
                             'label' => 'ปลดล็อคประตู',
-                            'text' => 'ปลดล็อคประตู'
+                            'text' => 'cd0'
                         ]
                     ]
                 ],
