@@ -97,5 +97,5 @@ curl_close($curl);
 
 $val = explode('"', $resp);
 
-$st_air_wr = 'ห้องประชุม1อุณหภูมิ '.$val[7].'°C';
+$st_air_wr = 'ห้องประชุมอุณหภูมิ '.$val[7].'°C';
 ?>
