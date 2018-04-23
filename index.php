@@ -42,12 +42,12 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'text' => 'เลือกเครื่องปรับอากาศที่ต้องการใช้งาน',
             'actions' => [
                 [
-                    'type' => 'text',
+                    'type' => 'message',
                     'label' => $st_air_mtr1,
                     'text' => 'แอร์ห้องประชุม 1'
                 ],
                 [
-                    'type' => 'text',
+                    'type' => 'message',
                     'label' => $st_air_mtr1,
                     'text' => 'แอร์ห้องทำงาน'
                 ]
