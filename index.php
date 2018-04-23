@@ -1,15 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Smart Office</title>
-  <meta http-equiv="refresh" content="3">
-</head>
-<body>
-
-</body>
-</html>
-
 <?php
 include("Status.php");
 
@@ -123,12 +111,12 @@ if ($message->{"text"} == 'แสงสว่าง') {
             ]
         ]
     ];
-} elseif($message->{"data"} == 'cd1') {
+} elseif($message->{"text"} == 'cd1') {
     $messageData = [
         'type' => 'text',
         'text' => "lock"
     ];
-}elseif($message->{"data"} == 'cd0') {
+}elseif($message->{"text"} == 'cd0') {
     $messageData = [
         'type' => 'text',
         'text' => "unlock"
@@ -156,7 +144,8 @@ curl_close($ch);
 
 ?>
 
-<?php
+<!--
+<?php/*
 require "vendor/autoload.php";
 $access_token = '04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uysuqnv/YvY300eOcXdgPygsQJ/QPsY1CTHe9QAoR2E14pw346tN2johPVIVUMO3CaBx/7W9TkKsXdTFRqL2+UJgdB04t89/1O/w1cDnyilFU=';
 $channelSecret = 'ee683a19a016dc7af6706b608f71d4c5';
@@ -169,5 +158,6 @@ if($st_front_door == "ประตูยังไม่ได้ล็อค") {
   $response = $bot->pushMessage($pushID, $textMessageBuilder);
   echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 }
-
+*/
 ?>
+-->
