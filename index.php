@@ -1,39 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Smart Office</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-<div class="container">
-<center>
-	<br>
-	<h1 class="display-4">Smart Office</h1>
-  <div id="Status_door">MoreThrust</div><br>
-  <?php 
-    echo $val[7];
-  ?>
-</center>
-</div>
-</body>
-</html>
-
+<!-- ############### STATUS DOOR ############### -->
 <?php
-
 $curl = curl_init();
-
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
     CURLOPT_URL => 'https://api.anto.io/channel/get/RM2BVxasyryPXrpuxm5xCkUnFxfkg1HbMDdG3kTU/settime/tim_now',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
 ));
-
-$resp = curl_exec($curl);
-
-curl_close($curl);
-$val = explode('"', $resp);
-echo 'สถานะ: '.$val[7];
-
+$resp = curl_exec($curl);curl_close($curl);$val = explode('"', $resp);$st_door = "";
+if($val[7] == "1"){$st_door = "ประตูล็อคอยู่";}elseif($val[7] == "0"){$st_door = "ประตูยังไม่ได้ล็อค";}
 ?>
 
 <?php
