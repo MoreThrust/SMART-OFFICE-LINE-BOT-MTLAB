@@ -6,7 +6,7 @@
 	<script type="text/javascript">
     $(document).ready(function(){
       
-        $('#sendData').click(function(){  
+        $('#sendData').click(function(){ 
                 var txt=$('#formData').serialize();  // ใช้ serialize() รวมเอา ค่าทั้งหมดที่อยู่ใน form     
                 $.ajax({
                   type: 'POST',
@@ -18,6 +18,11 @@
                 
                 });              
         })
+
+        window.onload=function(){
+    		setInterval("submitform();", 5000);
+    	}
+    	function submitform(){ document.getElementById('formData').submit(); }
       
     });
 </script>
