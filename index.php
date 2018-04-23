@@ -117,13 +117,25 @@ if ($message->{"text"} == 'แสงสว่าง') {
         'type' => 'text',
         'text' => "ล็อกประตูหน้าเรียบร้อยแล้ว"
     ];
-    $set_front_door = "lock";
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/front_door/1',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+    ));
+    $resp = curl_exec($curl);curl_close($curl);
 }elseif($message->{"text"} == 'ปลดล็อกประตูหน้า') {
     $messageData = [
         'type' => 'text',
         'text' => "ปลดล็อกประตูหน้าเรียบร้อยแล้ว"
     ];
-    $set_front_door = "unlock";
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/front_door/0',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+    ));
+    $resp = curl_exec($curl);curl_close($curl);
 }elseif($message->{"text"} == 'ล็อกประตูหลัง') {
     $messageData = [
         'type' => 'text',
