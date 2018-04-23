@@ -1,6 +1,6 @@
 <?php
 include("index.php");
-
+$set_front_door = "";
 if($set_front_door == "lock"){
 $curl = curl_init();
 
