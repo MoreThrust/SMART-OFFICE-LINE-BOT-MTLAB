@@ -43,7 +43,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'actions' => [
                 [
                     'type' => 'message',
-                    'label' => $st_air_mtr1,
+                    'label' => "ห้องประชุม 1".$st_air_mtr1,
                     'text' => 'แอร์ห้องประชุม 1'
                 ],
                 [
@@ -55,6 +55,28 @@ if ($message->{"text"} == 'แสงสว่าง') {
         ]
     ];
 } 
+elseif ($message->{"text"} == 'แอร์ห้องประชุม 1') {
+  $messageData = [
+        'type' => 'template',
+        'altText' => 'แอร์ห้องประชุม 1',
+        'template' => [
+            'type' => 'confirm',
+            'text' => 'แอร์กำลัง เปิดอยู่',
+            'actions' => [
+                [
+                    'type' => 'message',
+                    'label' => 'เปิดแอร์',
+                    'text' => 'เปิดแอร์'
+                ],
+                [
+                    'type' => 'message',
+                    'label' => 'ปิดแอร์',
+                    'text' => 'ปิดแอร์'
+                ],
+            ]
+        ]
+    ];
+}
 // #################### End Air ################### //
 // #################### Door ################### //
 elseif ($message->{"text"} == 'ประตู') {
