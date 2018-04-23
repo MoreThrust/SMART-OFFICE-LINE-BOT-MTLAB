@@ -29,6 +29,7 @@
 	<br>
 	<h1 class="display-4">Smart Office</h1>
   <div id="Status_door">MoreThrust</div>
+  <?php echo $_POST['st_door']; ?>
 </center>
 </div>
 </body>
