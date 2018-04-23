@@ -29,7 +29,10 @@
 	<br>
 	<h1 class="display-4">Smart Office</h1>
   <div id="Status_door">MoreThrust</div><br>
-  <?php echo $_POST['std']; ?>
+  <?php 
+    $valstd = $_POST['std']; 
+    echo $valstd;
+  ?>
 </center>
 </div>
 </body>
