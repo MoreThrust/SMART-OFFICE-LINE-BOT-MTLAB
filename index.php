@@ -113,12 +113,12 @@ if ($message->{"text"} == 'แสงสว่าง') {
             ]
         ]
     ];
-} elseif($message->{"text"} == 'cd1') {
+} elseif($message->{"data"} == 'cd1') {
     $messageData = [
         'type' => 'text',
         'text' => "lock"
     ];
-}elseif($message->{"text"} == 'cd0') {
+}elseif($message->{"data"} == 'cd0') {
     $messageData = [
         'type' => 'text',
         'text' => "unlock"
