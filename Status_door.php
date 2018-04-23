@@ -1,18 +1,12 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+<title>ThaiCreate.Com Tutorial</title>
 </head>
-<body>
-
-<form id="frm" method="POST" action="index.php">
-<input type="hidden" name="st_door" value=<?php echo "'".$val[7]."'";?>/>
+<body OnLoad="document.form1.submit();">
+<form name="form1" method="post" action="index.php" enctype="multipart/form-data">
+	<input type="text" name="std" value="ok">
+	<input name="btnSubmit" type="submit" value="Submit">
 </form>
-
-<script>
-document.getElementById("frm").submit();
-</script>
-
 </body>
 </html>
 
