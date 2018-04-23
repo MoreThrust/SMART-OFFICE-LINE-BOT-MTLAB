@@ -43,7 +43,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'actions' => [
                 [
                     'type' => 'message',
-                    'label' => "ห้องประชุม 1".$st_air_mtr1,
+                    'label' => $st_air_mtr1,
                     'text' => 'แอร์ห้องประชุม 1'
                 ],
                 [
