@@ -99,14 +99,14 @@ if ($message->{"text"} == 'แสงสว่าง') {
                     'text' => $st_mtr1_door,
                     'actions' => [
                         [
-                            'type' => 'message',
+                            'type' => 'postback',
                             'label' => 'ล็อคประตู',
-                            'text' => 'ล็อคประตู'
+                            'data' => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/front_door/1'
                         ],
                         [
-                            'type' => 'message',
+                            'type' => 'postback',
                             'label' => 'ปลดล็อคประตู',
-                            'text' => 'ปลดล็อคประตู'
+                            'data' => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/front_door/1'
                         ]
                     ]
                 ],
