@@ -7,7 +7,7 @@ $accessToken = '04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uy
 $jsonString = file_get_contents('php://input');
 error_log($jsonString);
 $jsonObj = json_decode($jsonString);
-
+$set_front_door = "";
 $message = $jsonObj->{"events"}[0]->{"message"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
@@ -116,7 +116,6 @@ if ($message->{"text"} == 'แสงสว่าง') {
     $messageData = [
         'type' => 'text',
         'text' => "ล็อกประตูหน้าเรียบร้อยแล้ว"
-        
     ];
     $set_front_door = "lock";
 }elseif($message->{"text"} == 'ปลดล็อกประตูหน้า') {
