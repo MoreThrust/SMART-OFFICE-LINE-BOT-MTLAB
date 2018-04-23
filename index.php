@@ -1,16 +1,6 @@
 <!-- ############### STATUS DOOR ############### -->
 <?php
-$curl = curl_init();
-curl_setopt_array($curl, array(
-    CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/get/RM2BVxasyryPXrpuxm5xCkUnFxfkg1HbMDdG3kTU/settime/tim_now',
-    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-));
-$resp = curl_exec($curl);curl_close($curl);$val = explode('"', $resp);$st_door = "";
-if($val[7] == "1"){$st_door = "ประตูล็อคอยู่";}elseif($val[7] == "0"){$st_door = "ประตูยังไม่ได้ล็อค";}
-?>
-
-<?php
+include("phpPageInclude.php");
 
 $accessToken = '04jXv6we9MYpqRctFYw7mNbBUIU0Wb22RVFrmfSaJup0Ii+Uf3INLI5FzsSdP1uysuqnv/YvY300eOcXdgPygsQJ/QPsY1CTHe9QAoR2E14pw346tN2johPVIVUMO3CaBx/7W9TkKsXdTFRqL2+UJgdB04t89/1O/w1cDnyilFU=';
 

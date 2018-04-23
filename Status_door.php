@@ -1,39 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript">
-    $(document).ready(function(){
-      
-        $('#sendData').click(function(){ 
-                var txt=$('#formData').serialize();  // ใช้ serialize() รวมเอา ค่าทั้งหมดที่อยู่ใน form     
-                $.ajax({
-                  type: 'POST',
-                  url: "index.php",
-                  data: txt,
-                  success: function(data){
-                     $('#showData').html( data );                  
-                  }
-                
-                });              
-        })
-
-        window.onload=function(){
-    		setInterval("submitform();", 1000);
-    	}
-    	function submitform(){ document.getElementById('formData').submit(); }
-      
-    });
-</script>
-</head>
-<body>
-<form id="formData" method="post" action="">
-	<input type="text" id="std" name="key" value="123">
-</form>
-</body>
-</html>
-
 <?php
 
 $curl = curl_init();
@@ -47,7 +11,12 @@ curl_setopt_array($curl, array(
 $resp = curl_exec($curl);
 
 curl_close($curl);
-$val = explode('"', $resp);
-echo 'สถานะ: '.$val[7];
 
+$val = explode('"', $resp);
+
+if($val[7] == "1"){
+	$st_door = "ประตูล็อคอยู่";
+}elseif($val[7] == "0"){
+	$st_door = "ประตูยังไม่ได้ล็อค";
+}
 ?>
