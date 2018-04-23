@@ -4,7 +4,7 @@
 </head>
 <body OnLoad="document.form1.submit();">
 <form name="form1" method="post" action="index.php" enctype="multipart/form-data">
-	<input type="text" name="std" value="ok">
+	<input type="text" name="std" value="oks">
 	<input name="btnSubmit" type="submit" value="Submit">
 </form>
 </body>
