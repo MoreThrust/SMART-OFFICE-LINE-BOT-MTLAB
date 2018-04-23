@@ -64,7 +64,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'type' => 'carousel',
             'columns' => [
                 [
-                    'title' => 'ประตูหน้าบ้าน',
+                    'title' => 'ประตูหน้า',
                     'text' => $st_door,
                     'actions' => [
                         [
@@ -80,7 +80,23 @@ if ($message->{"text"} == 'แสงสว่าง') {
                     ]
                 ],
                 [
-                    'title' => 'ประตูหลังบ้าน',
+                    'title' => 'ประตูหลัง',
+                    'text' => "ok",
+                    'actions' => [
+                        [
+                            'type' => 'message',
+                            'label' => 'ล็อคประตู',
+                            'text' => 'ล็อคประตู'
+                        ],
+                        [
+                            'type' => 'message',
+                            'label' => 'ปลดล็อคประตู',
+                            'text' => 'ปลดล็อคประตู'
+                        ]
+                    ]
+                ],
+                [
+                    'title' => 'ประตูห้องประชุม 1',
                     'text' => "ok",
                     'actions' => [
                         [
