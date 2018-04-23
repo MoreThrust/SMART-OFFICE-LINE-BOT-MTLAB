@@ -67,12 +67,12 @@ if ($message->{"text"} == 'แสงสว่าง') {
                         [
                             'type' => 'message',
                             'label' => 'ล็อคประตู',
-                            'text' => 'cf1'
+                            'text' => 'ล็อคประตูหน้า'
                         ],
                         [
                             'type' => 'message',
                             'label' => 'ปลดล็อคประตู',
-                            'text' => 'cd0'
+                            'text' => 'ปลดล็อคประตูหน้า'
                         ]
                     ]
                 ],
@@ -83,12 +83,12 @@ if ($message->{"text"} == 'แสงสว่าง') {
                         [
                             'type' => 'message',
                             'label' => 'ล็อคประตู',
-                            'text' => 'ล็อคประตู'
+                            'text' => 'ล็อคประตูหลัง'
                         ],
                         [
                             'type' => 'message',
                             'label' => 'ปลดล็อคประตู',
-                            'text' => 'ปลดล็อคประตู'
+                            'text' => 'ปลดล็อคประตูหลัง'
                         ]
                     ]
                 ],
@@ -99,27 +99,27 @@ if ($message->{"text"} == 'แสงสว่าง') {
                         [
                             'type' => 'postback',
                             'label' => 'ล็อคประตู',
-                            'data' => 'cd1'
+                            'data' => 'ล็อคประตูห้องประชุม 1'
                         ],
                         [
                             'type' => 'postback',
                             'label' => 'ปลดล็อคประตู',
-                            'data' => 'cd0'
+                            'data' => 'ปลดล็อคประตูห้องประชุม 1'
                         ]
                     ]
                 ],
             ]
         ]
     ];
-} elseif($message->{"text"} == 'cd1') {
+} elseif($message->{"text"} == 'ล็อคประตูหน้า') {
     $messageData = [
         'type' => 'text',
-        'text' => "lock"
+        'text' => "ล็อคประตูหน้าเรียบร้อยแล้ว"
     ];
-}elseif($message->{"text"} == 'cd0') {
+}elseif($message->{"text"} == 'ปลดล็อคประตูหน้า') {
     $messageData = [
         'type' => 'text',
-        'text' => "unlock"
+        'text' => "ปลดล็อคประตูหน้า"
     ];
 }
 
