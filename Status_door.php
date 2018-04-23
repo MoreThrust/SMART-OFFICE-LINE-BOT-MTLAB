@@ -20,7 +20,7 @@
         })
 
         window.onload=function(){
-    		setInterval("submitform();", 5000);
+    		setInterval("submitform();", 1000);
     	}
     	function submitform(){ document.getElementById('formData').submit(); }
       
