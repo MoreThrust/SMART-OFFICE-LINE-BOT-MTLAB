@@ -28,7 +28,7 @@
 <center>
 	<br>
 	<h1 class="display-4">Smart Office</h1>
-  <div id="Status_door">MoreThrust</div>
+  <div id="Status_door">MoreThrust</div><br>
   <?php echo $_POST['std']; ?>
 </center>
 </div>
