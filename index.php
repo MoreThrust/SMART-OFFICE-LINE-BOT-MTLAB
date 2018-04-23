@@ -111,7 +111,7 @@ if ($message->{"text"} == 'แสงสว่าง') {
             ]
         ]
     ];
-} elseif($message->{"text"} == 'ล็อคประตูหน้า') {
+}elseif($message->{"text"} == 'ล็อคประตูหน้า') {
     $messageData = [
         'type' => 'text',
         'text' => "ล็อคประตูหน้าเรียบร้อยแล้ว"
@@ -119,7 +119,27 @@ if ($message->{"text"} == 'แสงสว่าง') {
 }elseif($message->{"text"} == 'ปลดล็อคประตูหน้า') {
     $messageData = [
         'type' => 'text',
-        'text' => "ปลดล็อคประตูหน้า"
+        'text' => "ปลดล็อคประตูหน้าเรียบร้อยแล้ว"
+    ];
+}elseif($message->{"text"} == 'ปลดล็อคประตูหลัง') {
+    $messageData = [
+        'type' => 'text',
+        'text' => "ปลดล็อคประตูหลังเรียบร้อยแล้ว"
+    ];
+}elseif($message->{"text"} == 'ปลดล็อคประตูหลัง') {
+    $messageData = [
+        'type' => 'text',
+        'text' => "ปลดล็อคประตูหลังเรียบร้อยแล้ว"
+    ];
+}elseif($message->{"text"} == 'ปลดล็อคประตูห้องประชุม 1') {
+    $messageData = [
+        'type' => 'text',
+        'text' => "ปลดล็อคประตูห้องประชุม 1 เรียบร้อยแล้ว"
+    ];
+}elseif($message->{"text"} == 'ปลดล็อคประตูห้องประชุม 1') {
+    $messageData = [
+        'type' => 'text',
+        'text' => "ปลดล็อคประตูห้องประชุม 1 เรียบร้อยแล้ว"
     ];
 }
 
