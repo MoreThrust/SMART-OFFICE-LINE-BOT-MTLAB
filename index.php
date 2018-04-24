@@ -274,10 +274,10 @@ elseif($message->{"text"} == 'แสงสว่างทั้งหมด') {
 if ($message->{"text"} == 'แอร์') {
     $messageData = [
         'type' => 'template',
-        'altText' => 'ระบบแสงสว่าง',
+        'altText' => 'ระบบทำความเย็น',
         'template' => [
             'type' => 'buttons',
-            'title' => 'สถานะแสงสว่าง',
+            'title' => 'สถานะเครื่องทำความเย็น',
             'text' => 'เลือกส่วนที่ต้องการควบคุม',
             'actions' => [
                 [
