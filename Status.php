@@ -114,7 +114,7 @@ if($val[7] == "1"){
 $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/temp_workshop_room',
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/temp_reception_room',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
 ));
 $resp = curl_exec($curl);
@@ -127,7 +127,7 @@ $temp_air_ws = "ห้องรับแขก ".$val[7]."°C";
 $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/temp_meeting_room',
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/temp_workshop_room',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
 ));
 $resp = curl_exec($curl);
@@ -140,7 +140,7 @@ $temp_air_mt = "ห้องทำงาน ".$val[7]."°C";
 $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/temp_reception_room',
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/temp_meeting_room',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
 ));
 $resp = curl_exec($curl);
