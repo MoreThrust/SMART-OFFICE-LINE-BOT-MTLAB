@@ -41,11 +41,6 @@ if ($message->{"text"} == 'แสงสว่าง') {
                     'type' => 'message',
                     'label' => $st_lamp_mt,
                     'text' => 'แสงสว่างห้องประชุม'
-                ],
-                [
-                    'type' => 'message',
-                    'label' => $st_lamp_mt,
-                    'text' => 'แสงสว่างห้องประชุม'
                 ]
             ]
         ]
