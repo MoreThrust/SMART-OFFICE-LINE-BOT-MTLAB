@@ -283,22 +283,22 @@ if ($message->{"text"} == 'แอร์') {
                 [
                     'type' => 'message',
                     'label' => $st_lamp_rt,
-                    'text' => 'แสงสว่างห้องรับแขก'
+                    'text' => 'แอร์ห้องรับแขก'
                 ],
                 [
                     'type' => 'message',
                     'label' => $st_lamp_ws,
-                    'text' => 'แสงสว่างห้องทำงาน'
+                    'text' => 'แอร์ห้องทำงาน'
                 ],
                 [
                     'type' => 'message',
                     'label' => $st_lamp_mt,
-                    'text' => 'แสงสว่างห้องประชุม'
+                    'text' => 'แอร์ห้องประชุม'
                 ],
                 [
                     'type' => 'message',
-                    'label' => 'แสงสว่างทั้งหมด',
-                    'text' => 'แสงสว่างทั้งหมด'
+                    'label' => 'แอร์ทั้งหมด',
+                    'text' => 'แอร์ทั้งหมด'
                 ]
             ]
         ]
