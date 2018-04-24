@@ -11,28 +11,40 @@ $set_front_door = "";
 $message = $jsonObj->{"events"}[0]->{"message"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
+// ####################################### Lamp ###################################### //
+// ===================== Lamp work room ===================== //
 if ($message->{"text"} == 'แสงสว่าง') {
     $messageData = [
         'type' => 'template',
-        'altText' => '確認ダイアログ',
+        'altText' => 'ระบบแสงสว่าง',
         'template' => [
-            'type' => 'confirm',
-            'text' => '元気ですかー？',
+            'type' => 'buttons',
+            'title' => 'สถานะแสงสว่าง',
+            'text' => 'เลือกส่วนที่ต้องการควบคุม',
             'actions' => [
                 [
                     'type' => 'message',
-                    'label' => '元気です',
-                    'text' => '元気です'
+                    'label' => $st_ww,
+                    'text' => 'แอร์ห้องประชุม 1'
                 ],
                 [
                     'type' => 'message',
-                    'label' => 'まあまあです',
-                    'text' => 'まあまあです'
+                    'label' => $st_ws,
+                    'text' => 'แอร์ห้องทำงาน'
                 ],
+                [
+                    'type' => 'message',
+                    'label' => $st_mt,
+                    'text' => 'แอร์ห้องทำงาน'
+                ]
             ]
         ]
     ];
-} elseif ($message->{"text"} == 'แอร์') {
+} 
+// ===================== Lamp ===================== //
+// ####################################### End Lamp ###################################### //
+
+elseif ($message->{"text"} == 'แอร์') {
     $messageData = [
         'type' => 'template',
         'altText' => 'เครื่องปรับอากาศ',

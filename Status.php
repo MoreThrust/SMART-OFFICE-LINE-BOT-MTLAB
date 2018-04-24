@@ -1,3 +1,58 @@
+<!-- ==================== Status Lamp ==================== -->
+
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_walkway',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+));
+$resp = curl_exec($curl);
+curl_close($curl);
+$val = explode('"', $resp);
+if($val[7] == "1"){
+    $st_lamp_ww = "แสงสว่างทางเดิน: เปิดอยู่";
+}elseif($val[7] == "0"){
+    $st_lamp_ww = "แสงสว่างทางเดิน: ปิดอยู่";
+}
+?>
+
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_workshop_room',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+));
+$resp = curl_exec($curl);
+curl_close($curl);
+$val = explode('"', $resp);
+if($val[7] == "1"){
+    $st_lamp_ws = "แสงสว่างห้องทำงาน: เปิดอยู่";
+}elseif($val[7] == "0"){
+    $st_lamp_ws = "แสงสว่างห้องทำงาน: ปิดอยู่";
+}
+?>
+
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_meeting_room',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+));
+$resp = curl_exec($curl);
+curl_close($curl);
+$val = explode('"', $resp);
+if($val[7] == "1"){
+    $st_lamp_mt = "แสงสว่างห้องประชุม: เปิดอยู่";
+}elseif($val[7] == "0"){
+    $st_lamp_mt = "แสงสว่างห้องประชุม: ปิดอยู่";
+}
+?>
+
+<!-- ==================== End Status Lamp ==================== -->
+
 <?php
 $curl = curl_init();
 
@@ -99,3 +154,4 @@ $val = explode('"', $resp);
 
 $st_air_wr = 'ห้องทำงาน ['.$val[7].'°C]';
 ?>
+
