@@ -408,7 +408,7 @@ elseif($message->{"text"} == 'แอร์ห้องประชุม') {
         "altText" => "แอร์ห้องประชุม",
         "template" => [
           "type" => "confirm",
-          "text" => $temp_air_mt,
+          "text" => $st_air_mt,
           "actions" => [
             [
               "type" => "message",
