@@ -45,10 +45,10 @@ if ($message->{"text"} == 'แสงสว่าง') {
 elseif($message->{"text"} == 'แสงสว่างทางเดิน') {
     $messageData = [
         "type" => "template",
-        "altText" => "this is a confirm template",
+        "altText" => "แสงสว่างทางเดิน",
         "template" => [
           "type" => "confirm",
-          "text" => "Are you sure?",
+          "text" => $st_lamp_ww,
           "actions" => [
             [
               "type" => "message",
