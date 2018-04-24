@@ -12,7 +12,7 @@ $message = $jsonObj->{"events"}[0]->{"message"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
 // ####################################### Lamp ###################################### //
-// ===================== Lamp work room ===================== //
+
 if ($message->{"text"} == 'แสงสว่าง') {
     $messageData = [
         'type' => 'template',
@@ -25,131 +25,74 @@ if ($message->{"text"} == 'แสงสว่าง') {
                 [
                     'type' => 'message',
                     'label' => $st_lamp_ww,
-                    'text' => 'แอร์ห้องประชุม 1'
+                    'text' => 'แสงสว่างทางเดิน'
                 ],
                 [
                     'type' => 'message',
                     'label' => $st_lamp_ws,
-                    'text' => 'แอร์ห้องทำงาน'
+                    'text' => 'แสงสว่างห้องทำงาน'
                 ],
                 [
                     'type' => 'message',
                     'label' => $st_lamp_mt,
-                    'text' => 'แอร์ห้องทำงาน'
+                    'text' => 'แสงสว่างห้องประชุม'
                 ]
             ]
         ]
     ];
 } 
-// ===================== Lamp ===================== //
+
+elseif($message->{"text"} == 'แสงสว่างทางเดิน') {
+    $messageData = [
+        "type" => "template",
+        "altText" => "this is a confirm template",
+        "template" => [
+          "type" => "confirm",
+          "text" => "Are you sure?",
+          "actions" => [
+            [
+              "type" => "message",
+              "label" => "Yes",
+              "text" => "yes"
+            ],
+            [
+              "type" => "message",
+              "label" => "No",
+              "text" => "no"
+            ]
+          ]
+        ]
+    ];
+}elseif($message->{"text"} == 'แสงสว่างห้องทำงาน') {
+    $messageData = [
+        'type' => 'text',
+        'text' => "เปิดไฟห้องประชุมเรียบร้อยแล้ว"
+    ];
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/front_door/1',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+    ));
+    $resp = curl_exec($curl);curl_close($curl);
+}elseif($message->{"text"} == 'แสงสว่างห้องประชุม') {
+    $messageData = [
+        'type' => 'text',
+        'text' => "ปิดไฟห้องประชุมเรียบร้อยแล้ว"
+    ];
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/front_door/1',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+    ));
+    $resp = curl_exec($curl);curl_close($curl);
+}
+
 // ####################################### End Lamp ###################################### //
 
-elseif ($message->{"text"} == 'แอร์') {
-    $messageData = [
-        'type' => 'template',
-        'altText' => 'เครื่องปรับอากาศ',
-        'template' => [
-            'type' => 'buttons',
-            'title' => 'สถานะเครื่องปรับอากาศ',
-            'text' => 'เลือกเครื่องปรับอากาศที่ต้องการใช้งาน',
-            'actions' => [
-                [
-                    'type' => 'message',
-                    'label' => $st_air_mtr1,
-                    'text' => 'แอร์ห้องประชุม 1'
-                ],
-                [
-                    'type' => 'message',
-                    'label' => $st_air_wr,
-                    'text' => 'แอร์ห้องทำงาน'
-                ]
-            ]
-        ]
-    ];
-} 
-elseif ($message->{"text"} == 'แอร์ห้องประชุม 1') {
-  $messageData = [
-        'type' => 'template',
-        'altText' => 'แอร์ห้องประชุม 1',
-        'template' => [
-            'type' => 'confirm',
-            'text' => 'แอร์กำลัง เปิดอยู่',
-            'actions' => [
-                [
-                    'type' => 'message',
-                    'label' => 'เปิดแอร์',
-                    'text' => 'เปิดแอร์'
-                ],
-                [
-                    'type' => 'message',
-                    'label' => 'ปิดแอร์',
-                    'text' => 'ปิดแอร์'
-                ],
-            ]
-        ]
-    ];
-}
-// #################### End Air ################### //
-// #################### Door ################### //
-elseif ($message->{"text"} == 'ประตู') {
-    $messageData = [
-        'type' => 'template',
-        'altText' => 'สถานะประตู',
-        'template' => [
-            'type' => 'carousel',
-            'columns' => [
-                [
-                    'title' => 'ประตูหน้า',
-                    'text' => $st_front_door,
-                    'actions' => [
-                        [
-                            'type' => 'message',
-                            'label' => 'ล็อกประตู',
-                            'text' => 'ล็อกประตูหน้า'
-                        ],
-                        [
-                            'type' => 'message',
-                            'label' => 'ปลดล็อกประตู',
-                            'text' => 'ปลดล็อกประตูหน้า'
-                        ]
-                    ]
-                ],
-                [
-                    'title' => 'ประตูหลัง',
-                    'text' => $st_back_door,
-                    'actions' => [
-                        [
-                            'type' => 'message',
-                            'label' => 'ล็อกประตู',
-                            'text' => 'ล็อกประตูหลัง'
-                        ],
-                        [
-                            'type' => 'message',
-                            'label' => 'ปลดล็อกประตู',
-                            'text' => 'ปลดล็อกประตูหลัง'
-                        ]
-                    ]
-                ],
-                [
-                    'title' => 'ประตูห้องประชุม 1',
-                    'text' => $st_mtr1_door,
-                    'actions' => [
-                        [
-                            'type' => 'message',
-                            'label' => 'ล็อกประตู',
-                            'text' => 'ล็อกประตูห้องประชุม 1'
-                        ],
-                        [
-                            'type' => 'message',
-                            'label' => 'ปลดล็อกประตู',
-                            'text' => 'ปลดล็อกประตูห้องประชุม 1'
-                        ]
-                    ]
-                ],
-            ]
-        ]
-    ];
-}elseif($message->{"text"} == 'ล็อกประตูหน้า') {
+
+elseif($message->{"text"} == 'ล็อกประตูหน้า') {
     $messageData = [
         'type' => 'text',
         'text' => "ล็อกประตูหน้าเรียบร้อยแล้ว"
