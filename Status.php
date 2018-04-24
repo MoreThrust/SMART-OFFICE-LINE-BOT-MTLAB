@@ -11,9 +11,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_lamp_ws = "ไฟห้องทำงาน: เปิดอยู่ 􀔃􀇣blue circle􏿿";
+    $st_lamp_ws = "ไฟห้องทำงาน: เปิดอยู่􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
-    $st_lamp_ws = "ไฟห้องทำงาน: ปิดอยู่ 􀔃􀇢red circle􏿿";
+    $st_lamp_ws = "ไฟห้องทำงาน: ปิดอยู่􀔃􀇢red circle􏿿";
 }
 ?>
 
@@ -28,9 +28,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_lamp_mt = "ไฟห้องประชุม: เปิดอยู่ 􀔃􀇣blue circle􏿿";
+    $st_lamp_mt = "ไฟห้องประชุม: เปิดอยู่􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
-    $st_lamp_mt = "ไฟห้องประชุม: ปิดอยู่ 􀔃􀇢red circle􏿿";
+    $st_lamp_mt = "ไฟห้องประชุม: ปิดอยู่􀔃􀇢red circle􏿿";
 } 
 ?>
 
@@ -45,9 +45,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_lamp_rt = "ไฟห้องรับแขก: เปิดอยู่ 􀔃􀇣blue circle􏿿";
+    $st_lamp_rt = "ไฟห้องรับแขก: เปิดอยู่􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
-    $st_lamp_rt = "ไฟห้องรับแขก: ปิดอยู่ 􀔃􀇢red circle􏿿";
+    $st_lamp_rt = "ไฟห้องรับแขก: ปิดอยู่􀔃􀇢red circle􏿿";
 }   
 ?>
 
@@ -66,9 +66,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_air_ws = "แอร์ห้องทำงาน: เปิดอยู่";
+    $st_air_ws = "แอร์ห้องทำงาน: เปิดอยู่􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
-    $st_air_ws = "แอร์ห้องทำงาน: ปิดอยู่";
+    $st_air_ws = "แอร์ห้องทำงาน: ปิดอยู่􀔃􀇢red circle􏿿";
 }
 ?>
 
@@ -83,9 +83,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_air_mt = "แอร์ห้องประชุม: เปิดอยู่";
+    $st_air_mt = "แอร์ห้องประชุม: เปิดอยู่􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
-    $st_air_mt = "แอร์ห้องประชุม: ปิดอยู่";
+    $st_air_mt = "แอร์ห้องประชุม: ปิดอยู่􀔃􀇢red circle􏿿";
 }
 ?>
 
@@ -100,9 +100,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_air_rt = "แอร์ห้องรับแขก: เปิดอยู่";
+    $st_air_rt = "แอร์ห้องรับแขก: เปิดอยู่􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
-    $st_air_rt = "แอร์ห้องรับแขก: ปิดอยู่";
+    $st_air_rt = "แอร์ห้องรับแขก: ปิดอยู่􀔃􀇢red circle􏿿";
 }   
 ?>
 
