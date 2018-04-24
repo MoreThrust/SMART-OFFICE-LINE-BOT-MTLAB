@@ -83,9 +83,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_air_mt = "แอร์ห้องประชุม: เปิดอยู่􀔃􀇣blue circle􏿿";
+    $st_air_mt = "แอร์ห้องประชุม: เปิดอยู่";
 }elseif($val[7] == "0"){
-    $st_air_mt = "แอร์ห้องประชุม: ปิดอยู่􀔃􀇢red circle􏿿";
+    $st_air_mt = "แอร์ห้องประชุม: ปิดอยู่";
 }
 ?>
 
@@ -100,9 +100,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_air_rt = "แอร์ห้องรับแขก: เปิดอยู่􀔃􀇣blue circle􏿿";
+    $st_air_rt = "แอร์ห้องรับแขก: เปิดอยู่";
 }elseif($val[7] == "0"){
-    $st_air_rt = "แอร์ห้องรับแขก: ปิดอยู่􀔃􀇢red circle􏿿";
+    $st_air_rt = "แอร์ห้องรับแขก: ปิดอยู่";
 }   
 ?>
 
