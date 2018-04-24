@@ -198,7 +198,7 @@ elseif($message->{"text"} == 'แสงสว่างทั้งหมด') {
         "altText" => "แสงสว่างทั้งหมด",
         "template" => [
           "type" => "confirm",
-          "text" => $st_lamp_mt,
+          "text" => 'ระบบแสงสว่างทั้งหมด',
           "actions" => [
             [
               "type" => "message",
