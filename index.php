@@ -52,21 +52,21 @@ elseif($message->{"text"} == 'แสงสว่างทางเดิน') {
           "actions" => [
             [
               "type" => "message",
-              "label" => "Yes",
-              "text" => "yes"
+              "label" => "เปิดไฟทางเดิน",
+              "text" => "เปิดไฟทางเดิน"
             ],
             [
               "type" => "message",
-              "label" => "No",
-              "text" => "no"
+              "label" => "ปิดไฟทางเดิน",
+              "text" => "ปิดไฟทางเดิน"
             ]
           ]
         ]
     ];
-}elseif($message->{"text"} == 'แสงสว่างห้องทำงาน') {
+}elseif($message->{"text"} == 'เปิดไฟทางเดิน') {
     $messageData = [
         'type' => 'text',
-        'text' => "เปิดไฟห้องประชุมเรียบร้อยแล้ว"
+        'text' => "เปิดไฟทางเดินเรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -75,10 +75,10 @@ elseif($message->{"text"} == 'แสงสว่างทางเดิน') {
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
-}elseif($message->{"text"} == 'แสงสว่างห้องประชุม') {
+}elseif($message->{"text"} == 'ปิดไฟทางเดิน') {
     $messageData = [
         'type' => 'text',
-        'text' => "ปิดไฟห้องประชุมเรียบร้อยแล้ว"
+        'text' => "ปิดไฟทางเดินเรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
