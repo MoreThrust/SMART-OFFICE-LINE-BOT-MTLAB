@@ -24,17 +24,17 @@ if ($message->{"text"} == 'แสงสว่าง') {
             'actions' => [
                 [
                     'type' => 'message',
-                    'label' => $st_ww,
+                    'label' => $st_lamp_ww,
                     'text' => 'แอร์ห้องประชุม 1'
                 ],
                 [
                     'type' => 'message',
-                    'label' => $st_ws,
+                    'label' => $st_lamp_ws,
                     'text' => 'แอร์ห้องทำงาน'
                 ],
                 [
                     'type' => 'message',
-                    'label' => $st_mt,
+                    'label' => $st_lamp_mt,
                     'text' => 'แอร์ห้องทำงาน'
                 ]
             ]
