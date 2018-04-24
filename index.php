@@ -287,12 +287,12 @@ if ($message->{"text"} == 'แอร์') {
                 ],
                 [
                     'type' => 'message',
-                    'label' => $temp_lamp_ws,
+                    'label' => $temp_air_ws,
                     'text' => 'แอร์ห้องทำงาน'
                 ],
                 [
                     'type' => 'message',
-                    'label' => $temp_lamp_mt,
+                    'label' => $temp_air_mt,
                     'text' => 'แอร์ห้องประชุม'
                 ],
                 [
