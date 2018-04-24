@@ -274,31 +274,31 @@ elseif($message->{"text"} == 'แสงสว่างทั้งหมด') {
 if ($message->{"text"} == 'แอร์') {
     $messageData = [
         'type' => 'template',
-        'altText' => 'ระบบทำความเย็น',
+        'altText' => 'ระบบแสงสว่าง',
         'template' => [
             'type' => 'buttons',
-            'title' => 'สถานะระบบทำความเย็น',
+            'title' => 'สถานะแสงสว่าง',
             'text' => 'เลือกส่วนที่ต้องการควบคุม',
             'actions' => [
                 [
                     'type' => 'message',
-                    'label' => $temp_air_rt,
-                    'text' => 'แอร์ห้องรับแขก'
+                    'label' => $st_lamp_rt,
+                    'text' => 'แสงสว่างห้องรับแขก'
                 ],
                 [
                     'type' => 'message',
-                    'label' => $temp_air_ws,
-                    'text' => 'แอร์ห้องทำงาน'
+                    'label' => $st_lamp_ws,
+                    'text' => 'แสงสว่างห้องทำงาน'
                 ],
                 [
                     'type' => 'message',
-                    'label' => $temp_air_mt,
-                    'text' => 'แอร์ห้องประชุม'
+                    'label' => $st_lamp_mt,
+                    'text' => 'แสงสว่างห้องประชุม'
                 ],
                 [
                     'type' => 'message',
-                    'label' => 'แอ์ทั้งหมด',
-                    'text' => 'แอร์ทั้งหมด'
+                    'label' => 'แสงสว่างทั้งหมด',
+                    'text' => 'แสงสว่างทั้งหมด'
                 ]
             ]
         ]
