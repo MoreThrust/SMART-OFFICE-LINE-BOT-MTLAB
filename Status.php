@@ -120,7 +120,7 @@ curl_setopt_array($curl, array(
 $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
-$temp_air_ws = $val[7];
+$temp_air_ws = "ห้องรับแขก ".$val[7]."°C";
 ?>
 
 <?php
@@ -133,7 +133,7 @@ curl_setopt_array($curl, array(
 $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
-$temp_air_mt = $val[7];
+$temp_air_mt = "ห้องทำงาน ".$val[7]."°C";
 ?>
 
 <?php
@@ -146,7 +146,7 @@ curl_setopt_array($curl, array(
 $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
-$temp_air_rt = $val[7];
+$temp_air_rt = "ห้องประชุม ".$val[7]."°C";
 ?>
 
 <!-- ==================== End Temp Air ==================== -->
