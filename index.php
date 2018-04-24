@@ -305,80 +305,80 @@ if ($message->{"text"} == 'แอร์') {
     ];
 } 
 
-// ==================== Set WW ==================== //
-elseif($message->{"text"} == 'แสงสว่างทางเดิน') {
+// ==================== Set RT ==================== //
+elseif($message->{"text"} == 'แอร์ห้องรับแขก') {
     $messageData = [
         "type" => "template",
-        "altText" => "แสงสว่างทางเดิน",
+        "altText" => "แอร์ห้องรับแขก",
         "template" => [
           "type" => "confirm",
-          "text" => $st_lamp_ww,
+          "text" => $temp_lamp_rt,
           "actions" => [
             [
               "type" => "message",
-              "label" => "เปิดไฟ",
-              "text" => "เปิดไฟทางเดิน"
+              "label" => "เปิดแอร์",
+              "text" => "เปิดแอร์ห้องรับแขก"
             ],
             [
               "type" => "message",
-              "label" => "ปิดไฟ",
-              "text" => "ปิดไฟทางเดิน"
+              "label" => "ปิดแอร์",
+              "text" => "ปิดแอร์ห้องรับแขก"
             ]
           ]
         ]
     ];
-}elseif($message->{"text"} == 'เปิดไฟทางเดิน') {
+}elseif($message->{"text"} == 'เปิดแอร์ห้องรับแขก') {
     $messageData = [
         'type' => 'text',
-        'text' => "เปิดไฟทางเดินเรียบร้อยแล้ว"
+        'text' => "เปิดแอร์ห้องรับแขกเรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_walkway/1',
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/air_reception_room/1',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
-}elseif($message->{"text"} == 'ปิดไฟทางเดิน') {
+}elseif($message->{"text"} == 'ปิดแอร์ห้องรับแขก') {
     $messageData = [
         'type' => 'text',
-        'text' => "ปิดไฟทางเดินเรียบร้อยแล้ว"
+        'text' => "ปิดแอร์เรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_walkway/0',
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/air_reception_room/0',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
 }
 
 // ==================== Set WS ==================== //
-elseif($message->{"text"} == 'แสงสว่างห้องทำงาน') {
+elseif($message->{"text"} == 'แอร์ห้องทำงาน') {
     $messageData = [
         "type" => "template",
-        "altText" => "แสงสว่างห้องทำงาน",
+        "altText" => "แอร์ห้องทำงาน",
         "template" => [
           "type" => "confirm",
-          "text" => $st_lamp_ws,
+          "text" => $temp_air_ws,
           "actions" => [
             [
               "type" => "message",
-              "label" => "เปิดไฟ",
-              "text" => "เปิดไฟห้องทำงาน"
+              "label" => "เปิดแอร์",
+              "text" => "เปิดแอร์ห้องทำงาน"
             ],
             [
               "type" => "message",
-              "label" => "ปิดไฟ",
-              "text" => "ปิดไฟห้องทำงาน"
+              "label" => "ปิดแอร์",
+              "text" => "ปิดแอร์ห้องทำงาน"
             ]
           ]
         ]
     ];
-}elseif($message->{"text"} == 'เปิดไฟห้องทำงาน') {
+}elseif($message->{"text"} == 'เปิดแอร์ห้องทำงาน') {
     $messageData = [
         'type' => 'text',
-        'text' => "เปิดไฟห้องทำงานเรียบร้อยแล้ว"
+        'text' => "เปิดแอร์ห้องทำงานเรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -387,10 +387,10 @@ elseif($message->{"text"} == 'แสงสว่างห้องทำงา�
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
-}elseif($message->{"text"} == 'ปิดไฟห้องทำงาน') {
+}elseif($message->{"text"} == 'ปิดแอร์ห้องทำงาน') {
     $messageData = [
         'type' => 'text',
-        'text' => "ปิดไฟห้องทำงานเรียบร้อยแล้ว"
+        'text' => "ปิดแอร์ห้องทำงานเรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -402,31 +402,31 @@ elseif($message->{"text"} == 'แสงสว่างห้องทำงา�
 }
 
 // ==================== Set MT ==================== //
-elseif($message->{"text"} == 'แสงสว่างห้องประชุม') {
+elseif($message->{"text"} == 'แอร์ห้องประชุม') {
     $messageData = [
         "type" => "template",
-        "altText" => "แสงสว่างห้องประชุม",
+        "altText" => "แอร์ห้องประชุม",
         "template" => [
           "type" => "confirm",
-          "text" => $st_lamp_mt,
+          "text" => $temp_air_mt,
           "actions" => [
             [
               "type" => "message",
-              "label" => "เปิดไฟ",
-              "text" => "เปิดไฟห้องประชุม"
+              "label" => "เปิดแอร์",
+              "text" => "เปิดแอร์ห้องประชุม"
             ],
             [
               "type" => "message",
-              "label" => "ปิดไฟ",
-              "text" => "ปิดไฟห้องประชุม"
+              "label" => "ปิดแอร์",
+              "text" => "ปิดแอร์ห้องประชุม"
             ]
           ]
         ]
     ];
-}elseif($message->{"text"} == 'เปิดไฟห้องประชุม') {
+}elseif($message->{"text"} == 'เปิดแอร์ห้องประชุม') {
     $messageData = [
         'type' => 'text',
-        'text' => "เปิดไฟห้องประชุมเรียบร้อยแล้ว"
+        'text' => "เปิดแอร์ห้องประชุมเรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -435,10 +435,10 @@ elseif($message->{"text"} == 'แสงสว่างห้องประช�
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
-}elseif($message->{"text"} == 'ปิดไฟห้องประชุม') {
+}elseif($message->{"text"} == 'ปิดแอร์ห้องประชุม') {
     $messageData = [
         'type' => 'text',
-        'text' => "ไฟห้องประชุมเรียบร้อยแล้ว"
+        'text' => "ปิดแอร์ห้องประชุมเรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -450,36 +450,36 @@ elseif($message->{"text"} == 'แสงสว่างห้องประช�
 }
 
 // ==================== Set ALL ==================== //
-elseif($message->{"text"} == 'แสงสว่างทั้งหมด') {
+elseif($message->{"text"} == 'แอร์ทั้งหมด') {
     $messageData = [
         "type" => "template",
-        "altText" => "แสงสว่างทั้งหมด",
+        "altText" => "แอร์ทั้งหมด",
         "template" => [
           "type" => "confirm",
-          "text" => 'ระบบแสงสว่างทั้งหมด',
+          "text" => 'ระบบแอร์ทั้งหมด',
           "actions" => [
             [
               "type" => "message",
-              "label" => "เปิดไฟทั้งหมด",
-              "text" => "เปิดไฟทั้งหมด"
+              "label" => "เปิดแอร์ทั้งหมด",
+              "text" => "เปิดแอร์ทั้งหมด"
             ],
             [
               "type" => "message",
-              "label" => "ปิดไฟทั้งหมด",
-              "text" => "ปิดไฟทั้งหมด"
+              "label" => "ปิดแอร์ทั้งหมด",
+              "text" => "ปิดแอร์ทั้งหมด"
             ]
           ]
         ]
     ];
-}elseif($message->{"text"} == 'เปิดไฟทั้งหมด') {
+}elseif($message->{"text"} == 'เปิดแอร์ทั้งหมด') {
     $messageData = [
         'type' => 'text',
-        'text' => "เปิดไฟทั้งหมดเรียบร้อยแล้ว"
+        'text' => "เปิดแอร์ทั้งหมดเรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_walkway/1',
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/air_reception_room/1',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
@@ -497,15 +497,15 @@ elseif($message->{"text"} == 'แสงสว่างทั้งหมด') {
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
-}elseif($message->{"text"} == 'ปิดไฟทั้งหมด') {
+}elseif($message->{"text"} == 'ปิดแอร์ทั้งหมด') {
     $messageData = [
         'type' => 'text',
-        'text' => "ไฟทั้งหมดเรียบร้อยแล้ว"
+        'text' => "ปิดแอร์ทั้งหมดเรียบร้อยแล้ว"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_walkway/0',
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/air_reception_room/0',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
@@ -525,7 +525,7 @@ elseif($message->{"text"} == 'แสงสว่างทั้งหมด') {
     $resp = curl_exec($curl);curl_close($curl);
 }
 
-// ####################################### End Lamp ###################################### //
+// ####################################### End Air ###################################### //
 
 $response = [
     'replyToken' => $replyToken,
