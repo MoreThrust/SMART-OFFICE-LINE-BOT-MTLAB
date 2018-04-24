@@ -11,9 +11,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_lamp_ww = "แสงสว่างทางเดิน: เปิดอยู่";
+    $st_lamp_ww = "ทางเดิน: เปิดอยู่";
 }elseif($val[7] == "0"){
-    $st_lamp_ww = "แสงสว่างทางเดิน: ปิดอยู่";
+    $st_lamp_ww = "ทางเดิน: ปิดอยู่";
 }
 ?>
 
@@ -28,9 +28,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_lamp_ws = "แสงสว่างห้องทำงาน: เปิดอยู่";
+    $st_lamp_ws = "ห้องทำงาน: เปิดอยู่";
 }elseif($val[7] == "0"){
-    $st_lamp_ws = "แสงสว่างห้องทำงาน: ปิดอยู่";
+    $st_lamp_ws = "ห้องทำงาน: ปิดอยู่";
 }
 ?>
 
@@ -45,9 +45,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_lamp_mt = "แสงสว่างห้องประชุม: เปิดอยู่";
+    $st_lamp_mt = "ห้องประชุม: เปิดอยู่";
 }elseif($val[7] == "0"){
-    $st_lamp_mt = "แสงสว่างห้องประชุม: ปิดอยู่";
+    $st_lamp_mt = "ห้องประชุม: ปิดอยู่";
 }
 ?>
 
