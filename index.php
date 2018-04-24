@@ -312,7 +312,7 @@ elseif($message->{"text"} == 'แอร์ห้องรับแขก') {
         "altText" => "แอร์ห้องรับแขก",
         "template" => [
           "type" => "confirm",
-          "text" => $temp_lamp_rt,
+          "text" => $st_air_rt,
           "actions" => [
             [
               "type" => "message",
@@ -360,7 +360,7 @@ elseif($message->{"text"} == 'แอร์ห้องทำงาน') {
         "altText" => "แอร์ห้องทำงาน",
         "template" => [
           "type" => "confirm",
-          "text" => $temp_air_ws,
+          "text" => $st_air_ws,
           "actions" => [
             [
               "type" => "message",
