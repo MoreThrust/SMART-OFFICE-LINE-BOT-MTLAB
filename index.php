@@ -132,7 +132,7 @@ elseif($message->{"text"} == 'แสงสว่างห้องทำงา�
     $curl = curl_init();
     curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_workshop_room/1',
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_workshop_room/0',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
@@ -180,7 +180,7 @@ elseif($message->{"text"} == 'แสงสว่างห้องประช�
     $curl = curl_init();
     curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_meeting_room/1',
+    CURLOPT_URL => 'https://api.anto.io/channel/set/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/lamp_meeting_room/0',
     CURLOPT_USERAGENT => 'Codular Sample cURL Request'
     ));
     $resp = curl_exec($curl);curl_close($curl);
