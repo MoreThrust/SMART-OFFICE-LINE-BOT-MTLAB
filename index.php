@@ -282,7 +282,7 @@ if ($message->{"text"} == 'แอร์') {
             'actions' => [
                 [
                     'type' => 'message',
-                    'label' => $st_lamp_rt,
+                    'label' => $temp_air_rt,
                     'text' => 'แอร์ห้องรับแขก'
                 ],
                 [
