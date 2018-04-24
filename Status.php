@@ -120,7 +120,7 @@ curl_setopt_array($curl, array(
 $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
-$val[7] = $temp_air_ws;
+$temp_air_ws = $val[7];
 ?>
 
 <?php
@@ -133,7 +133,7 @@ curl_setopt_array($curl, array(
 $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
-$val[7] = $temp_air_mt;
+$temp_air_mt = $val[7];
 ?>
 
 <?php
@@ -146,7 +146,7 @@ curl_setopt_array($curl, array(
 $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
-$val[7] = $temp_air_rt;
+$temp_air_rt = $val[7];
 ?>
 
 <!-- ==================== End Temp Air ==================== -->
