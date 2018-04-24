@@ -11,9 +11,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_lamp_ws = "ไฟห้องทำงาน: เปิดอยู่􀔃􀇣blue circle􏿿";
+    $st_lamp_ws = "ไฟห้องทำงาน: เปิดอยู่";
 }elseif($val[7] == "0"){
-    $st_lamp_ws = "ไฟห้องทำงาน: ปิดอยู่􀔃􀇢red circle􏿿";
+    $st_lamp_ws = "ไฟห้องทำงาน: ปิดอยู่";
 }
 ?>
 
@@ -28,9 +28,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_lamp_mt = "ไฟห้องประชุม: เปิดอยู่􀔃􀇣blue circle􏿿";
+    $st_lamp_mt = "ไฟห้องประชุม: เปิดอยู่";
 }elseif($val[7] == "0"){
-    $st_lamp_mt = "ไฟห้องประชุม: ปิดอยู่􀔃􀇢red circle􏿿";
+    $st_lamp_mt = "ไฟห้องประชุม: ปิดอยู่";
 } 
 ?>
 
@@ -45,9 +45,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_lamp_rt = "ไฟห้องรับแขก: เปิดอยู่􀔃􀇣blue circle􏿿";
+    $st_lamp_rt = "ไฟห้องรับแขก: เปิดอยู่";
 }elseif($val[7] == "0"){
-    $st_lamp_rt = "ไฟห้องรับแขก: ปิดอยู่􀔃􀇢red circle􏿿";
+    $st_lamp_rt = "ไฟห้องรับแขก: ปิดอยู่";
 }   
 ?>
 
@@ -66,9 +66,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_air_ws = "แอร์ห้องทำงาน: เปิดอยู่􀔃􀇣blue circle􏿿";
+    $st_air_ws = "แอร์ห้องทำงาน: เปิดอยู่";
 }elseif($val[7] == "0"){
-    $st_air_ws = "แอร์ห้องทำงาน: ปิดอยู่􀔃􀇢red circle􏿿";
+    $st_air_ws = "แอร์ห้องทำงาน: ปิดอยู่";
 }
 ?>
 
