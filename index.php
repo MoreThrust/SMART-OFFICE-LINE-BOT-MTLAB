@@ -732,7 +732,7 @@ elseif($message->{"text"} == 'ประตูทั้งหมด') {
 }elseif($message->{"text"} == 'ล็อกประตูทั้งหมด') {
     $messageData = [
         'type' => 'text',
-        'text' => "ล็อกประตูทั้งหมดเรียบร้อยแล้ว"
+        'text' => "ล็อกประตูทั้งหมดเรียบร้อยแล้ว 􀄃􀉕ok hand􏿿"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -758,7 +758,7 @@ elseif($message->{"text"} == 'ประตูทั้งหมด') {
 }elseif($message->{"text"} == 'ปลดล็อกประตูทั้งหมด') {
     $messageData = [
         'type' => 'text',
-        'text' => "ปลดล็อกประตูทั้งหมดเรียบร้อยแล้ว"
+        'text' => "ปลดล็อกประตูทั้งหมดเรียบร้อยแล้ว 􀄃􀉕ok hand􏿿"
     ];
     $curl = curl_init();
     curl_setopt_array($curl, array(
