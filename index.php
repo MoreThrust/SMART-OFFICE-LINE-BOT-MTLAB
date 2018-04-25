@@ -718,7 +718,7 @@ elseif($message->{"text"} == 'ประตูทั้งหมด') {
           "actions" => [
             [
               "type" => "message",
-              "label" => "ล็อกประต",
+              "label" => "ล็อกประตู",
               "text" => "ล็อกประตู"
             ],
             [
