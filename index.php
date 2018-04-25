@@ -800,10 +800,6 @@ if ($message->{"text"} == 'สถานะ') {
         "type" => "text",
         "text" => "ok"
     ];
-    $response = [
-    'replyToken' => $replyToken,
-    'messages' => [$messageData]
-    ];
 } 
 
 // ####################################### End Status ###################################### //
