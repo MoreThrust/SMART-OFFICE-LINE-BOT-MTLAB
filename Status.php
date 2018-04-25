@@ -215,7 +215,7 @@ curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
     $st_door_mt = "ห้องประชุม: ล็อกอยู่";
-    $st_door_mt2 = " 􀔃􀇣lock􏿿";
+    $st_door_mt2 = " 􀔃􀆑lock􏿿";
 }elseif($val[7] == "0"){
     $st_door_mt = "ห้องประชุม: ไม่มีการล็อก";
     $st_door_mt2 = " 􀔃􀇣opened lock􏿿";
