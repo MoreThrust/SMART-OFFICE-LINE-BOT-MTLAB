@@ -789,7 +789,7 @@ elseif($message->{"text"} == 'ประตูทั้งหมด') {
 
 if ($message->{"text"} == 'สถานะ') {
     $messageData = [
-        'type' => 'template',
+        'type' => 'text',
         'text' => 'สถานะโดยรวม\n
                   ระบบแสงสว่าง\n
                   ระบบทำความเย็น\n
