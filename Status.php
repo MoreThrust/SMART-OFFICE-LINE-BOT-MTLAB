@@ -73,8 +73,10 @@ curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
     $st_air_ws = "แอร์ห้องทำงาน: เปิดอยู่";
+    $st_air_ws2 = " 􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
     $st_air_ws = "แอร์ห้องทำงาน: ปิดอยู่";
+    $st_air_ws2 = " 􀔃􀇣red circle􏿿";
 }
 ?>
 
@@ -90,8 +92,10 @@ curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
     $st_air_mt = "แอร์ห้องประชุม: เปิดอยู่";
+    $st_air_mt2 = " 􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
     $st_air_mt = "แอร์ห้องประชุม: ปิดอยู่";
+    $st_air_mt2 = " 􀔃􀇣red circle􏿿";
 }
 ?>
 
@@ -107,8 +111,10 @@ curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
     $st_air_rt = "แอร์ห้องรับแขก: เปิดอยู่";
+    $st_air_rt2 = " 􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
     $st_air_rt = "แอร์ห้องรับแขก: ปิดอยู่";
+    $st_air_rt2 = " 􀔃􀇣red circle􏿿";
 }   
 ?>
 
@@ -171,8 +177,10 @@ curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
     $st_door_et = "ทางเข้า: ล็อกอยู่";
+    $st_door_et2 = " 􀔃􀇣lock􏿿";
 }elseif($val[7] == "0"){
     $st_door_et = "ทางเข้า: ไม่มีการล็อก";
+    $st_door_et2 = " 􀔃􀇣opened lock􏿿";
 }
 ?>
 
@@ -188,8 +196,10 @@ curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
     $st_door_ws = "ห้องทำงาน: ล็อกอยู่";
+    $st_door_ws2 = " 􀔃􀇣lock􏿿";
 }elseif($val[7] == "0"){
     $st_door_ws = "ห้องทำงาน: ไม่มีการล็อก";
+    $st_door_ws2 = " 􀔃􀇣opened lock􏿿";
 } 
 ?>
 
@@ -205,8 +215,10 @@ curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
     $st_door_mt = "ห้องประชุม: ล็อกอยู่";
+    $st_door_mt2 = " 􀔃􀇣lock􏿿";
 }elseif($val[7] == "0"){
     $st_door_mt = "ห้องประชุม: ไม่มีการล็อก";
+    $st_door_mt2 = " 􀔃􀇣opened lock􏿿";
 }   
 ?>
 
