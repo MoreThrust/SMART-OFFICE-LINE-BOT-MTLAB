@@ -790,9 +790,7 @@ elseif($message->{"text"} == 'ประตูทั้งหมด') {
 if ($message->{"text"} == 'สถานะ') {
     $messageData = [
         "type" => "text",
-        "text" => "
-        สถานะโดยรวม\n
-        สถานะแสงสว่าง\n
+        "text" => "สถานะโดยรวม\nสถานะแสงสว่าง\n
         - ห้องรับแขก : ".$st_lamp_rt."\n
         - ห้องทำงาน : ".$st_lamp_ws."\n
         - ห้องประชุม : ".$st_lamp_mt."\n\n
