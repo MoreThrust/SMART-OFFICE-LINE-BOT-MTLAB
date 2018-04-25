@@ -540,17 +540,17 @@ if ($message->{"text"} == 'ประตู') {
             'actions' => [
                 [
                     'type' => 'message',
-                    'label' => $st_lamp_rt,
+                    'label' => $st_door_et,
                     'text' => 'ประตูทางเข้า'
                 ],
                 [
                     'type' => 'message',
-                    'label' => $st_lamp_ws,
+                    'label' => $st_door_ws,
                     'text' => 'ประตูห้องทำงาน'
                 ],
                 [
                     'type' => 'message',
-                    'label' => $st_lamp_mt,
+                    'label' => $st_door_mt,
                     'text' => 'ประตูห้องประชุม'
                 ],
                 [
@@ -570,7 +570,7 @@ elseif($message->{"text"} == 'ประตูทางเข้า') {
         "altText" => "ประตูทางเข้า",
         "template" => [
           "type" => "confirm",
-          "text" => $st_lamp_rt,
+          "text" => $st_door_et,
           "actions" => [
             [
               "type" => "message",
@@ -618,7 +618,7 @@ elseif($message->{"text"} == 'ประตูห้องทำงาน') {
         "altText" => "ประตูห้องทำงาน",
         "template" => [
           "type" => "confirm",
-          "text" => $st_lamp_ws,
+          "text" => $st_door_ws,
           "actions" => [
             [
               "type" => "message",
@@ -666,7 +666,7 @@ elseif($message->{"text"} == 'แสงสว่างห้องประช�
         "altText" => "แสงสว่างห้องประชุม",
         "template" => [
           "type" => "confirm",
-          "text" => $st_lamp_mt,
+          "text" => $st_door_mt,
           "actions" => [
             [
               "type" => "message",
