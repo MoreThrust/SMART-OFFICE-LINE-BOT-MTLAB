@@ -150,3 +150,58 @@ $temp_air_mt = "ห้องประชุม ".$val[7]."°C";
 ?>
 
 <!-- ==================== End Temp Air ==================== -->
+
+<!-- ==================== Status Door ==================== -->
+
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/door_entrance',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+));
+$resp = curl_exec($curl);
+curl_close($curl);
+$val = explode('"', $resp);
+if($val[7] == "1"){
+    $st_lamp_ws = "ประตูทางเข้า: ล็อกอยู่";
+}elseif($val[7] == "0"){
+    $st_lamp_ws = "ประตูทางเข้า: ไม่มีการล็อกอยู่";
+}
+?>
+
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/door_workshop_room',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+));
+$resp = curl_exec($curl);
+curl_close($curl);
+$val = explode('"', $resp);
+if($val[7] == "1"){
+    $st_lamp_mt = "ประตูห้องทำงาน: ล็อกอยู่";
+}elseif($val[7] == "0"){
+    $st_lamp_mt = "ประตูห้องทำงาน: ไม่มีการล็อกอยู่";
+} 
+?>
+
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => 'https://api.anto.io/channel/get/4GZewdAlDhxWz6ijHnvDSh73Q9rxeOjYNx0SLRgl/Smart_Office/door_meeting_room',
+    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+));
+$resp = curl_exec($curl);
+curl_close($curl);
+$val = explode('"', $resp);
+if($val[7] == "1"){
+    $st_lamp_rt = "ประตูห้องประชุม: ล็อกอยู่";
+}elseif($val[7] == "0"){
+    $st_lamp_rt = "ประตูห้องประชุม: ไม่มีการล็อกอยู่";
+}   
+?>
+
+<!-- ==================== End Status Door ==================== -->
