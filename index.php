@@ -660,10 +660,10 @@ elseif($message->{"text"} == 'ประตูห้องทำงาน') {
 }
 
 // ==================== Set MT ==================== //
-elseif($message->{"text"} == 'แสงสว่างห้องประชุม') {
+elseif($message->{"text"} == 'ประตูห้องประชุม') {
     $messageData = [
         "type" => "template",
-        "altText" => "แสงสว่างห้องประชุม",
+        "altText" => "ประตูห้องประชุม",
         "template" => [
           "type" => "confirm",
           "text" => $st_door_mt,
