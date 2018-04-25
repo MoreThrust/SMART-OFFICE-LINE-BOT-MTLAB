@@ -790,7 +790,7 @@ elseif($message->{"text"} == 'ประตูทั้งหมด') {
 if ($message->{"text"} == 'สถานะ') {
     $messageData = [
         "type" => "text",
-        "text" => "􀔃􀄒novice􏿿 สถานะโดยรวม\n􁤁􀆅energy saving bulb􏿿 สถานะแสงสว่าง\n".$st_lamp_rt."\n".$st_lamp_ws."\n".$st_lamp_mt."\n\nสถานะเครื่องทำความเย็น\n".$st_air_rt."\n".$st_air_ws."\n".$st_air_mt."\n\n􀌂􀇨snowy􏿿 สถานะอุณหภูมิห้อง\n".$temp_air_rt."\n".$temp_air_ws."\n".$temp_air_mt."\n\n􀐂􀇚กุญแจ􏿿 สถานะระบบความปลอดภัย\n".$st_door_et."\n".$st_door_ws."\n".$st_door_mt."\n"
+        "text" => "􀔃􀄒novice􏿿 สถานะโดยรวม\n􁤁􀆅energy saving bulb􏿿 แสงสว่าง\n- ".$st_lamp_rt.$st_lamp_rt2."\n- ".$st_lamp_ws."\n- ".$st_lamp_mt."\n\nเครื่องทำความเย็น\n- ".$st_air_rt.$st_air_rt2."\n- ".$st_air_ws."\n".$st_air_mt."\n\n􀌂􀇨snowy􏿿 อุณหภูมิห้อง\n- ".$temp_air_rt."\n- ".$temp_air_ws."\n- ".$temp_air_mt."\n\n􀐂􀇚กุญแจ􏿿 ระบบความปลอดภัย\n- ".$st_door_et."\n- ".$st_door_ws."\n- ".$st_door_mt."\n"
     ];
 } 
 
