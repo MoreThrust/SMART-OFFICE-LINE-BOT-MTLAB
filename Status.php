@@ -164,9 +164,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_door_et = "ประตูทางเข้า: ล็อกอยู่";
+    $st_door_et = "ทางเข้า: ล็อกอยู่";
 }elseif($val[7] == "0"){
-    $st_door_et = "ประตูทางเข้า: ไม่มีการล็อกอยู่";
+    $st_door_et = "ทางเข้า: ไม่มีการล็อกอยู่";
 }
 ?>
 
@@ -181,9 +181,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_door_ws = "ประตูห้องทำงาน: ล็อกอยู่";
+    $st_door_ws = "ห้องทำงาน: ล็อกอยู่";
 }elseif($val[7] == "0"){
-    $st_door_ws = "ประตูห้องทำงาน: ไม่มีการล็อกอยู่";
+    $st_door_ws = "ปห้องทำงาน: ไม่มีการล็อกอยู่";
 } 
 ?>
 
@@ -198,9 +198,9 @@ $resp = curl_exec($curl);
 curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
-    $st_door_mt = "ประตูห้องประชุม: ล็อกอยู่";
+    $st_door_mt = "ห้องประชุม: ล็อกอยู่";
 }elseif($val[7] == "0"){
-    $st_door_mt = "ประตูห้องประชุม: ไม่มีการล็อกอยู่";
+    $st_door_mt = "ห้องประชุม: ไม่มีการล็อกอยู่";
 }   
 ?>
 
