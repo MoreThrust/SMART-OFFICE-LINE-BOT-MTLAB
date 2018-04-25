@@ -12,8 +12,10 @@ curl_close($curl);
 $val = explode('"', $resp);
 if($val[7] == "1"){
     $st_lamp_ws = "ไฟห้องทำงาน: เปิดอยู่";
+    $st_lamp_ws2 = "􀔃􀇣blue circle􏿿";
 }elseif($val[7] == "0"){
     $st_lamp_ws = "ไฟห้องทำงาน: ปิดอยู่";
+    $st_lamp_ws2 = "􀔃􀇢red circle􏿿";
 }
 ?>
 
